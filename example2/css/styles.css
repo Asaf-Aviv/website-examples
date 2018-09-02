@@ -121,9 +121,11 @@ button, input, textarea {
 }
 
 .page__header__img {
+  opacity: 0;
   max-height: 100%;
   width: 100%;
   padding: 30px;
+  animation: flicker-in 3000ms forwards 500ms;
 }
 
 .page__header__btn {
@@ -145,16 +147,30 @@ button, input, textarea {
 .guide__header {
   text-align: center;
   color: #edda18;
-  margin-bottom: 30px;
+  margin-bottom: 80px;
 }
 
 .guide__item {
   display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+}
+
+.guide__item:last-of-type {
+  margin-bottom: 30px;
 }
 
 .guide__img__container {
   display: flex;
   flex: 1;
+}
+
+.guide__img {
+  animation: var(--float);
+  height: 100%;
+  width: 100%;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 .guide__item:nth-child(odd) {
@@ -163,10 +179,6 @@ button, input, textarea {
 
 .guide__item:nth-child(odd) .guide__img__container {
   justify-content: flex-end;
-}
-
-.guide__img {
-  animation: var(--float);
 }
 
 .guide__item:nth-of-type(1) .guide__img {
@@ -189,7 +201,7 @@ button, input, textarea {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  flex: 1;
+  flex: 1.5;
 }
 
 .guide__title {
@@ -389,6 +401,29 @@ button, input, textarea {
   .nav__link {
     padding-left: 15px;
   }
+
+  .guide__text {
+    margin-bottom: 30px;
+  }
+
+  .guide__item {
+    max-width: 400px;
+    justify-content: center;
+    margin: 0 auto 50px auto;
+  }
+
+  .guide__item:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .guide__info {
+    min-width: 100%;
+    order: -1;
+  }
+
+  .guide__img__container {
+    flex: none;
+  }
 }
 
 @media (max-width: 600px) {
@@ -404,5 +439,101 @@ button, input, textarea {
 
   50% {
     transform: translateY(20px);
+  }
+}
+
+@keyframes flicker-in {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  10.1% {
+    opacity: 1;
+  }
+  10.2% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  20.1% {
+    opacity: 1;
+  }
+  20.6% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  30.1% {
+    opacity: 1;
+  }
+  30.5% {
+    opacity: 1;
+  }
+  30.6% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  45.1% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  55.1% {
+    opacity: 0;
+  }
+  57% {
+    opacity: 0;
+  }
+  57.1% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  60.1% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  65.1% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  75.1% {
+    opacity: 0;
+  }
+  77% {
+    opacity: 0;
+  }
+  77.1% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  85.1% {
+    opacity: 0;
+  }
+  86% {
+    opacity: 0;
+  }
+  86.1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
   }
 }
