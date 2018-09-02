@@ -23,25 +23,20 @@ document.addEventListener('DOMContentLoaded', () => {
   }));
 
   document.querySelector('.page__header__btn')
-    .addEventListener('click', () =>
-      smoothScroll(pageSectionsOffsets[2])
-  );
+    .addEventListener('click', () => smoothScroll(pageSectionsOffsets[2]));
 
   // Functions
   const isNavOpen = () => nav.classList.contains('nav--open');
 
   function toggleNav() {
     body.style.overflow = nav.classList.contains('nav--open') ?
-    'visible' : 'hidden';
+      'visible' : 'hidden';
 
     nav.classList.toggle('nav--open');
   }
 
-  function smoothScroll(offsetTop) {
-    window.scrollTo({
-      top: offsetTop,
-      behavior: 'smooth'
-    });
+  function smoothScroll(top, behavior = 'smooth') {
+    window.scrollTo({ top, behavior });
   }
 
   function activeMenuSwitcher() {
@@ -56,7 +51,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
     });
-  };
+  }
 });
-
-
