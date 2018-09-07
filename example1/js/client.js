@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
   // DOM Elements
-  const body = document.querySelector('body');
-  const nav = document.querySelector('.nav');
-  const navSignup = document.querySelector('.nav__signup');
+  const body        = document.querySelector('body');
+  const nav         = document.querySelector('.nav');
+  const navSignup   = document.querySelector('.nav__signup');
   const navTogglers = document.querySelectorAll('.hamburger, .nav__menu__fill');
-  const mainCards = document.querySelectorAll('.card');
+  const mainCards   = document.querySelectorAll('.card');
 
   // Event Listeners
   navTogglers.forEach(toggler => toggler

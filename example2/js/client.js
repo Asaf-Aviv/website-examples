@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
   // DOM Elements
-  const body = document.querySelector('body');
-  const nav = document.querySelector('.nav');
-  const navTogglers = document.querySelectorAll('.hamburger, .nav__menu__fill');
-  const navLinks = nav.querySelectorAll('.nav__link');
-  const pageSections = document.querySelectorAll('.page__header, .page__header__img, .main__guide, .contact__section');
+  const body                = document.querySelector('body');
+  const nav                 = document.querySelector('.nav');
+  const navTogglers         = document.querySelectorAll('.hamburger, .nav__menu__fill');
+  const navLinks            = nav.querySelectorAll('.nav__link');
+  const pageSections        = document.querySelectorAll('.page__header, .page__header__img, .main__guide, .contact__section');
   const pageSectionsOffsets = [...pageSections].map(sec => sec.offsetTop - 54);
 
   // OnLoad
