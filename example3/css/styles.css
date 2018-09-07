@@ -1,10 +1,35 @@
 :root {
-  --main-text: #F8F8F9;
+  --main-text: #f8f8f9;
   --green: #89f5a1;
   --orange: #f7c920;
-  --green-gradient: linear-gradient(145deg, rgba(77,146,212,1) 0%, rgb(52, 187, 167) 41%, rgba(12,150,144,1) 100%);
-  --orange-gradient: linear-gradient(145deg, rgba(212,172,77,1) 0%, rgba(247,201,32,1) 55%, rgba(150,137,12,1) 100%);
-  --body-gradient: linear-gradient(145deg, rgb(68, 45, 140) 0%, rgba(27, 60, 134, 0.9976798143851509) 35%, rgb(89, 30, 156) 70%, rgb(105, 50, 169) 100%);
+  --purple-gradient: linear-gradient(
+    135deg,
+    #ce9ffc 0%,
+    #7367f0 100%
+  );
+  --green-gradient: linear-gradient(
+    135deg,
+    #42e695 0%,
+    #3bb2b8 100%
+  );
+  --red-gradient: linear-gradient(
+    135deg,
+    #f36265 0%,
+    #961276 100%
+  );
+  --orange-gradient: linear-gradient(
+    145deg,
+    rgba(212, 172, 77, 1) 0%,
+    rgba(247, 201, 32, 1) 55%,
+    rgba(150, 137, 12, 1) 100%
+  );
+  --body-gradient: linear-gradient(
+    145deg,
+    rgb(68, 45, 140) 0%,
+    rgba(27, 60, 134, 0.9976798143851509) 35%,
+    rgb(89, 30, 156) 70%,
+    rgb(105, 50, 169) 100%
+  );
 }
 
 * {
@@ -12,24 +37,28 @@
   padding: 0;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Khula', sans-serif;
-  color: #F8F8F9;
+  font-family: "Khula", sans-serif;
+  color: var(--main-text);
   background: var(--body-gradient);
   min-height: 100vh;
   overflow-x: hidden;
 }
 
-button, input, textarea {
+button,
+input,
+textarea {
   font-family: inherit;
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -63,7 +92,7 @@ button, input, textarea {
 }
 
 .nav__link--active::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 2px;
   border-radius: 5px;
@@ -85,7 +114,7 @@ button, input, textarea {
 
 .nav__signup {
   padding: 5px 30px 0px 10px;
-  border: 1px solid #778BE0;
+  border: 1px solid #778be0;
   text-transform: uppercase;
 }
 
@@ -116,7 +145,8 @@ button, input, textarea {
   opacity: 0;
   display: flex;
   flex-direction: column;
-  transition: transform 350ms cubic-bezier(0.62,-0.43, 0.27, 1.55), opacity 350ms;
+  transition: transform 350ms cubic-bezier(0.62, -0.43, 0.27, 1.55),
+    opacity 350ms;
   transform: translateY(-150%);
   background: #2a276d;
   box-shadow: 0 8px 24px rgb(24, 26, 64);
@@ -125,7 +155,7 @@ button, input, textarea {
 }
 
 .signup__form::after {
-  content: '';
+  content: "";
   position: absolute;
   top: -15px;
   right: 40px;
@@ -135,7 +165,6 @@ button, input, textarea {
 }
 
 .signup__form__title {
-  color: var(--green);
   margin-bottom: 15px;
   letter-spacing: 1.5px;
   font-weight: 600;
@@ -145,7 +174,7 @@ button, input, textarea {
 .signup__form__label {
   color: var(--green);
   font-weight: 600;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 .signup__form__input {
@@ -156,7 +185,7 @@ button, input, textarea {
   padding: 8px 15px;
   background: rgba(255, 255, 255, 0.2);
   margin-bottom: 20px;
-  box-shadow: 0 5px 10px rgba(32, 29, 49, 0.4)
+  box-shadow: 0 5px 10px rgba(32, 29, 49, 0.4);
 }
 
 .signup__form__input:focus {
@@ -167,12 +196,12 @@ button, input, textarea {
   margin-bottom: 40px;
 }
 
-.signup__form__buttons {
+.signup__form__btns {
   display: flex;
   justify-content: space-between;
 }
 
-.signup__button {
+.signup__btn {
   line-height: 44px;
   cursor: pointer;
   height: 40px;
@@ -184,7 +213,7 @@ button, input, textarea {
   box-shadow: 0 4px 10px rgb(32, 29, 49);
 }
 
-.signup__button--primary {
+.signup__btn--primary {
   color: var(--main-text);
   border: none;
   margin-right: 20px;
@@ -193,23 +222,124 @@ button, input, textarea {
   background: var(--green-gradient);
 }
 
-.signup__button--secondary {
+.signup__btn--secondary {
   color: var(--main-text);
   border: none;
   flex: 1;
-  background: rgb(247,201,32);
-  background: var(--orange-gradient);
+  background: rgb(247, 201, 32);
+  background: var(--red-gradient);
 }
 
 .page__header {
-  height: 40vh;
+  padding-top: 100px;
+  height: 700px;
+  max-height: 100vh;
 }
 
-.page__header .container {
-  transform: skew(-40deg);
-  height: 100%;
+.page__header__title {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 100px;
+  font-weight: 600;
 }
 
-.page__header h1 {
-  transform: skew(40deg);
+.page__img {
+  height: 300px;
+  width: 100%;
+}
+
+.pricing__section {
+  margin-bottom: 150px;
+}
+
+.pricing__title {
+  font-size: 48px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 80px;
+}
+
+.pricing__cards__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.pricing__card {
+  padding: 60px 0;
+  border-radius: 10px;
+  flex: 1;
+  text-align: center;
+  max-width: 300px;
+  box-shadow: 0 8px 30px rgb(56, 21, 97);
+}
+
+.pricing__card--free {
+  background: var(--purple-gradient);
+}
+
+.pricing__card--basic {
+  background: var(--green-gradient);
+}
+
+.pricing__card--pro {
+  background: var(--red-gradient);
+}
+
+.pricing__card:hover {
+  transform: scale(1.03);
+}
+
+.card__row {
+  letter-spacing: 1px;
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px rgba(29, 29, 29, 0.3);
+}
+
+.card__title, .card__price {
+  font-size: 32px;
+}
+
+.card__btn {
+  outline: 0;
+  cursor: pointer;
+  letter-spacing: 1px;
+  background: inherit;
+  border: 0;
+  font-size: 16px;
+  padding: 10px 24px;
+  color: var(--main-text);
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(29, 29, 29, 0.3);
+}
+
+.support__section {
+  margin-bottom: 150px;
+}
+
+.support__container {
+  padding: 80px 0;
+  display: flex;
+  justify-content: space-evenly;
+  background: #2a276d;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgb(56, 21, 97);
+}
+
+.support__box {
+  flex: 1;
+  text-align: center;
+  max-width: 500px;
+  letter-spacing: 1.5px;
+}
+
+.support__box__title {
+  margin-bottom: 20px;
+}
+
+.support__box__text {
+  line-height: 2.2;
 }
