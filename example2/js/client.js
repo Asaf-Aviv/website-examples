@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navTogglers         = document.querySelectorAll('.hamburger, .nav__menu__fill');
   const navLinks            = nav.querySelectorAll('.nav__link');
   const pageSections        = document.querySelectorAll('.page__header, .page__header__img, .main__guide, .contact__section');
-  const pageSectionsOffsets = [...pageSections].map(sec => sec.offsetTop - 54);
+  const pageSectionsOffsets = [...pageSections].map(sec => sec.offsetTop - 60);
 
   // OnLoad
   activeMenuSwitcher();
@@ -45,9 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
     pageSectionsOffsets.forEach((secOffset, secIndex) => {
       if (currPos >= secOffset) {
         navLinks.forEach((link, linkIndex) => {
-          secIndex === linkIndex ?
-            link.classList.add('nav__link--active') :
-            link.classList.remove('nav__link--active');
+          secIndex === linkIndex
+            ? link.classList.add('nav__link--active')
+            : link.classList.remove('nav__link--active');
         });
       }
     });

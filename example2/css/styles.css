@@ -3,7 +3,7 @@
   --main-text: #FFF;
   --nav-bg: #181f38;
   --gradient-main: linear-gradient(to right bottom, #2dd9f5, #00c5f7, #00aff5, #3997ec, #627dda);
-  --gradient-submit: linear-gradient(to bottom, #4fff6d, #43ff5d, #37ff4a, #29ff32, #17ff00);
+  --gradient-submit: linear-gradient(to bottom, #4fff6d, #2ef94a, #2bda3c, #10b522, #2a8e20);
   --shadow-color: #a9a9a9;
   --vh: calc(100vh - 54px);
   --float: float cubic-bezier(0.42, 0.04, 0.35, 1.01) infinite;
@@ -165,7 +165,7 @@ button, input, textarea {
 }
 
 .guide__container {
-  max-width: 700px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -271,7 +271,6 @@ button, input, textarea {
 
 .input {
   margin-bottom: 20px;
-  border-radius: 10px;
   font-size: 18px;
   line-height: 2.6;
   padding-left: 10px;
@@ -344,6 +343,11 @@ button, input, textarea {
   width: 60px;
   height: 60px;
   padding: 5px;
+  transition: transform 200ms;
+}
+
+.social__icon:hover {
+  transform: translateY(-10px);
 }
 
 .copyrights__text {

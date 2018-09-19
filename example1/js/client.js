@@ -42,8 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const classes = e.target.classList;
 
     if (classes.contains('btn--bordered-base') || classes.contains('nav--toggler')) {
-      const navDisplay = navSignup.style.display;
-      navSignup.style.display = !navDisplay || navDisplay === 'none' ? 'block' :'none';
+      navSignup.classList.toggle('nav__signup--open');
+      // const navDisplay = navSignup.style.display;
+
+      // navSignup.style.display = !navDisplay || navDisplay === 'none' ? 'block' :'none';
     }
   }
 });
