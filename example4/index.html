@@ -5,15 +5,387 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Khula:300,400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Khula:300,400,600,700">
   <link rel="stylesheet" href="css/styles.css">
   <title>Example 4</title>
 </head>
 
 <body>
   <header class="nav__header">
-
+    <nav class="nav">
+      <div class="nav__logo">A.</div>
+      <ul class="nav__menu">
+        <li class="nav__menu__item"><a class="nav__menu__link" href="#">Fund</a></li>
+        <li class="nav__menu__item"><a class="nav__menu__link" href="#">Index</a></li>
+        <li class="nav__menu__item"><a class="nav__menu__link" href="#">About</a></li>
+        <li class="nav__menu__item"><a class="nav__menu__link" href="#">Financial Professionals</a></li>
+      </ul>
+      <button class="btn btn--primary">Schedule Call</button>
+    </nav>
   </header>
+
+  <header class="page__header">
+    <div class="container">
+      <section class="page__header__section">
+        <h1 class="page__header__title">The world's first cryptocurrency index fund.</h1>
+        <p class="page__header__body">
+          The Bitwise HOLD 10 Private Index Fund holds the top 10 cryptocurrencies weighted by 5-year
+          diluted market cap and rebalanced mounthly.
+        </p>
+        <div class="btn--group">
+          <button class="btn btn--secondary">Get Started</button>
+          <button class="btn btn--primary">Get Fact Sheet</button>
+        </div>
+      </section>
+      <section class="graph__section">
+        <div class="graph__title">
+          <div class="graph__coin">
+            <div class="shape shape--circle shape--primary"></div>
+            <span class="coin__item">HOLD 10</span>
+            <h5 class="coin__price">1364.9%</h5>
+            <span class="coin__price--down">-5.98%</span>
+          </div>
+          <div class="graph__coin">
+            <div class="shape shape--circle shape--secondary"></div>
+            <span class="coin__item">Bitcoin</span>
+            <h5 class="coin__price">847.3%</h5>
+            <span class="coin__price--down">-6.14%</span>
+          </div>
+          <div class="graph__coin">
+            <div class="shape shape--circle"></div>
+            <span class="coin__item">S&P 500</span>
+            <h5 class="coin__price">21.1%</h5>
+            <span class="coin__price--down">-0.10%</span>
+          </div>
+        </div>
+        <div class="graph__main">
+          <h4 class="graph__main__title">HOLD 10TM Index</h4>
+          <div class="graph">GRAPH</div>
+        </div>
+        <div class="page__header__footer__body">
+          * The cumulative return is based on a hypothetical backtest of the HOLD 10 Index.
+          Actual returns may differ materially from hypothetical returns of the index.
+          Full Disclaimers <a href="#" class="disclaimer">here</a>.
+        </div>
+      </section>
+    </div>
+  </header>
+
+  <section class="fund">
+    <div class="container">
+
+
+      <div class="fund__title__container">
+        <h2 class="fund__title">HOLD 10 Index Fund</h2>
+        <div class="fund__menu">
+          <div class="fund__item">
+            <p class="fund__item__body">2.5% Annual Management Fee</p>
+          </div>
+
+          <div class="fund__item">
+            <p class="fund__item__body">Custodian: Kingdom Trust</p>
+          </div>
+
+          <div class="fund__item">
+            <p class="fund__item__body">Legal Counsel: Wilson Sonsini Goodrich & Rosati</p>
+          </div>
+        </div>
+      </div>
+      <div class="fund__brands">
+        <div class="brands__menu">
+          <div class="brands__item">
+            <span>Forbes</span>
+          </div>
+          <div class="brands__item">
+            <span>Bloomberg</span>
+          </div>
+          <div class="brands__item">
+            <span>USE TODAY.</span>
+          </div>
+          <div class="brands__item">
+            <span>coindesk</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="main">
+    <div class="container">
+      <section class="main__facts">
+        <h1 class="main__facts__title">A smart way to invest</h1>
+        <p class="main__facts__item">
+          Own the market instead of picking winners. We're in a new era for cryptocurrency.
+          in the several years prior to March 2017, Bitcoin was almost always over 80% of the
+          entire market.
+        </p>
+        <p class="main__facts__item">
+          Since March, Bitcoin has become less then 50%, while many other porotocols have grown
+          to significant market caps and developed substantial communities.
+        </p>
+        <p class="main__facts__item">
+          The coins in the HOLD 10 Index initially will comprise 85% of the market, and are rebalanced
+          as the market changes.
+        </p>
+        <p class="main__facts__item">
+          Over the last 12 months, owning the HOLD 10 had higher returns, lower volatility, and higher Sharpe
+          Ratio then just owning Bitcoin.
+        </p>
+        <p class="main__facts__item">
+          In the several years prior to Match 2017, Bitcoin was almost always over 80% of the entire market
+        </p>
+        <p class="main__facts__item">
+          Since March, Bitcoin has become less then 50%, while many other porotocols have grown
+          to significant market caps and developed substantial communities.
+        </p>
+      </section>
+      <section class="main__graph">
+        <div class="main__graph__container">
+          <h3 class="main__graph__title">Percentage of Total Cryptocurrency Market</h3>
+          <div class="main__graph__graph">GRAPH</div>
+          <div class="main__graph__labels">
+            <div class="shape shape--circle shape--primary"></div>
+            <h6 class="graph__label">HOLD10</h6>
+            <div class="shape shape--circle shape--secondary"></div>
+            <h6 class="graph__label">Bitcoin</h6>
+            <div class="shape shape--circle"></div>
+            <h6 class="graph__label">Others</h6>
+          </div>
+        </div>
+
+        <section class="daily">
+          <div class="daily__container">
+            <div class="daily__title__wrapper">
+              <div class="shape shape--circle shape--primary"></div>
+              <h6 class="daily__title">HOLD 10</h6>
+            </div>
+            <div class="daily__item">
+              <div class="daily__item__perc__wrapper">
+                <div class="shape shape--arrow shape--primary"></div>
+                <h2 class="daily__item__perc">0.89%</h2>
+              </div>
+              <p class="daily__item__desc">Avg Daily Return</p>
+            </div>
+            <div class="daily__item">
+              <div class="daily__item__perc__wrapper">
+                <div class="shape shape--arrow shape--primary"></div>
+                <h2 class="daily__item__perc">4.93%</h2>
+              </div>
+              <p class="daily__item__desc">Std of Daily Return</p>
+            </div>
+            <div class="daily__item">
+              <div class="daily__item__perc__wrapper">
+                <div class="shape shape--arrow shape--primary"></div>
+                <h2 class="daily__item__perc">3.44</h2>
+              </div>
+              <p class="daily__item__desc">Annualized Sharpe Ratio</p>
+            </div>
+          </div>
+
+          <div class="daily__container">
+            <div class="daily__title__wrapper">
+              <div class="shape shape--circle shape--secondary"></div>
+              <h6 class="daily__title">Bitcoin</h6>
+            </div>
+            <div class="daily__item">
+              <div class="daily__item__perc__wrapper">
+                <div class="shape shape--arrow shape--secondary"></div>
+                <h2 class="daily__item__perc">0.74%</h2>
+              </div>
+              <p class="daily__item__desc">Avg Daily Return</p>
+            </div>
+            <div class="daily__item">
+              <div class="daily__item__perc__wrapper">
+                <div class="shape shape--arrow shape--secondary"></div>
+                <h2 class="daily__item__perc">5.28%</h2>
+              </div>
+              <p class="daily__item__desc">Std of Daily Return</p>
+            </div>
+            <div class="daily__item">
+              <div class="daily__item__perc__wrapper">
+                <div class="shape shape--arrow shape--secondary"></div>
+                <h2 class="daily__item__perc">2.57</h2>
+              </div>
+              <p class="daily__item__desc">Annualized Sharpe Ratio</p>
+            </div>
+          </div>
+        </section>
+        <section class="dailiy__footer">
+          <p class="dailies__footer__body">
+            * Calculated by taking thje average daily returns and standard deviations from the
+            past 12 months. Sharpe ratio annualized assuming 365 trading days.
+          </p>
+        </section>
+      </section>
+    </div>
+  </main>
+
+  <section class="security">
+    <div class="container">
+      <div class="security__bg"></div>
+      <div class="security__item first">
+        <img class="security__item__img" src="assets/lock.svg" alt="lock">
+        <h1 class="security__title">A secure way to own cryptocurrencies</h1>
+        <p class="security__body">
+          Securely storing coins is imperative but difficult. Storing coins yourself in a wallet is
+          feasible for some. but you're at risk of being hacked. phished. or even just making a typo.
+        </p>
+        <p class="security__body">
+          The Bitwise HOLD 10 Private Index Fund uses state-of-the-art security procedures to protect
+          your assets. The custodian puts all underlying coins in an institutional-grade 100% cold
+          storage vault air-gapped from the internet.
+        </p>
+      </div>
+
+      <div class="security__item">
+        <img class="security__item__img" src="assets/shield.svg" alt="shield">
+        <h1 class="security__title">A convenient way to invest</h1>
+        <p class="security__body">
+          For most people. it's not feasible to spend the time needed to do thorough research on which exchanges
+          to trust, which coins to buy, and how to allocate your portfolio.
+        </p>
+        <p class="security__body">
+          Once you buy coins you need to do additional work of storing them securely. rebalancing your portfolio
+          regularly, staying on top of the news, calculating portfolio performance.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="people">
+    <div class="container">
+      <h1 class="people__title">Our People</h1>
+      <div class="people__list">
+
+        <div class="people__card">
+          <img class="people__card__img" src="assets/p1.jpg" alt="Justin Brewer">
+          <h4 class="people__card__name">Justin Brewer</h4>
+          <span class="people__card__position">CEO</span>
+          <p class="people__card__body">
+            Previously Product Manager at Facebook and Instagram.
+            Studied business at Wharton.
+          </p>
+        </div>
+
+        <div class="people__card">
+          <img class="people__card__img" src="assets/p2.jpg" alt="Ashley Reyes">
+          <h4 class="people__card__name">Ashley Reyes</h4>
+          <span class="people__card__position">CTO</span>
+          <p class="people__card__body">
+            Part-time Partner at Y Combinator. Previously
+            Director at Facebook. Investor in Boom.
+          </p>
+        </div>
+
+        <div class="people__card">
+          <img class="people__card__img" src="assets/p3.jpg" alt="Timothy Douglas">
+          <h4 class="people__card__name">Timothy Douglas</h4>
+          <span class="people__card__position">Vice President</span>
+          <p class="people__card__body">
+            CEO & Cofounder of Chain. Previously Venture Partnerat RRE Ventures.
+          </p>
+        </div>
+
+        <div class="people__card">
+          <img class="people__card__img" src="assets/p4.jpg" alt="Lauren Garza">
+          <h4 class="people__card__name">Lauren Garza</h4>
+          <span class="people__card__position">Advisor</span>
+          <p class="people__card__body">
+            Chief Risk Officer. Passport Capital. Previously VP at MSCI.
+          </p>
+        </div>
+
+        <div class="people__card">
+          <img class="people__card__img" src="assets/p5.jpg" alt="Devorah Ellis">
+          <h4 class="people__card__name">Devorah Ellis</h4>
+          <span class="people__card__position">Investor</span>
+          <p class="people__card__body">
+            Former CEO Zenefits. Previously Founder of Tammer. Founder of Geni
+            . COO at PayPal.
+          </p>
+        </div>
+
+        <div class="people__card">
+          <img class="people__card__img" src="assets/p6.jpg" alt="Jerry Hansen">
+          <h4 class="people__card__name">Jerry Hansen</h4>
+          <span class="people__card__position">Investor</span>
+          <p class="people__card__body">
+            Lecturer Stanford University. Former CEO Wealthfront.
+            Previously VP at Linkedin.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="companies">
+    <div class="companies__item">LOGO</div>
+    <div class="companies__item">LOGO</div>
+    <div class="companies__item">LOGO</div>
+    <div class="companies__item">LOGO</div>
+  </section>
+
+  <section class="investing">
+    <div class="container">
+      <div class="investing__split">
+        <h2 class="investing__title">Become an investor in the Index Fund</h2>
+        <p class="investing__body">The Bitwise HOLD 10 Private Index Fund is a smart and convenient way to
+          invest in the cryptocurrency market. it is currently limited to U.S
+          accredited investors with a $25.000 minimum investment.
+        </p>
+        <button class="btn btn--secondary">Get Started</button>
+      </div>
+      <div class="investing__graph">
+        GRAPH
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <section class="footer__newsletter">
+        <h3 class="newsletter__title">
+          Join our newsletter to get analysis from our research team.
+        </h3>
+        <div class="newsletter__input__group">
+          <input class="newsletter__input" type="email" name="email" placeholder="Email Address">
+          <button class="btn btn--primary">Subscribe</button>
+        </div>
+      </section>
+
+      <section class="footer__contact">
+        <div class="socials">
+          <div class="socials__item">
+            <a href="#">
+              <img class="socials__logo" src="assets/tw.svg" alt="twitter-logo">
+            </a>
+          </div>
+          <div class="socials__item">
+            <a href="#">
+              <img class="socials__logo" src="assets/fb.svg" alt="facebook-logo">
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__copyrights">
+          A Fund &copy; 2018
+        </div>
+
+        <nav class="nav">
+          <ul class="nav__menu">
+            <li class="nav__menu__item"><a class="nav__menu__link" href="#">Privacy Policy</a></li>
+            <li class="nav__menu__item"><a class="nav__menu__link" href="#">Terms of Service</a></li>
+            <li class="nav__menu__item"><a class="nav__menu__link" href="#">FAQ</a></li>
+            <li class="nav__menu__item"><a class="nav__menu__link" href="#">Join us</a></li>
+          </ul>
+        </nav>
+      </section>
+
+    </div>
+    <p class="credit">Designed by <a href="https://dribbble.com/goutham-aj">Goutham</a></p>
+  </footer>
 
   <script src="js/client.js"></script>
 </body>

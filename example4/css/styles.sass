@@ -1,2 +1,415 @@
+$white: #F0F0F1
+$primary: #59C8CA
+$secondary: #FD9F50
+
+@font-face
+  font-family: DINNextLTPro
+  src: url("../fonts/DINNextLTPro-Regular.otf") format("opentype")
+
+@font-face
+  font-family: DINNextLTPro
+  font-weight: 500
+  src: url("../fonts/DINNextLTPro-Medium.otf") format("opentype")
+
+@font-face
+  font-family: DINNextLTPro
+  font-weight: bold
+  src: url("../fonts/DINNextLTPro-Bold.otf") format("opentype")
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+*,
+*::before,
+*::after
+  box-sizing: border-box
+
 body
-  color: red
+  font-family: DINNextLTPro, sans-serif
+  color: #8e8e8e
+  background: #191E24
+  line-height: 1.5
+  // background: linear-gradient(61deg,rgba(60,70,82,1) 0%,rgba(73,82,92,1) 18%,rgba(38,45,53,1) 100%)
+
+button,
+input,
+textarea
+  font-family: inherit
+
+input,
+textarea,
+[contenteditable]
+  caret-color: $white
+
+button
+  cursor: pointer
+
+h1, h2, h3, h4, h5, h6
+  color: $white
+  font-weight: 400
+  line-height: 1.2
+  margin: 0
+
+h1
+  font-size: 50px
+
+h2
+  font-size: 35px
+
+h3
+  font-size: 25px
+
+h4
+  font-size: 22px
+
+h5
+  font-size: 20px
+
+h6
+  font-size: 18px
+
+.container
+  max-width: 1200px
+  margin: 0 auto
+  padding: 0 15px
+
+.nav
+  display: flex
+  align-items: center
+  &__header
+    padding: 50px 200px
+  &__logo
+    font-size: 32px
+    color: $white
+  .btn
+    margin-left: 30px
+  &__menu
+    margin-left: auto
+    display: flex
+    list-style: none
+    justify-content: space-between
+    &__link
+      display: block
+      transition: color 200ms
+      color: #7d7d7d
+      text-decoration: none
+      padding: 5px 0
+      margin-left: 20px
+      &:hover
+        color: #c5c5c5
+
+.btn
+  padding: 0 30px
+  background: none
+  border-radius: 50px
+  height: 50px
+  color: $white
+  border: 2px solid
+  transition: background 200ms
+  &--primary
+    border-color: $primary
+  &--secondary
+    border-color: $secondary
+
+.page__header
+  margin: 120px 0
+  .container
+    display: flex
+  &__section
+    padding-right: 100px
+  &__title
+    margin-bottom: 50px
+  &__body
+    margin-bottom: 50px
+  .btn:first-of-type
+    margin-right: 20px
+
+.graph
+  &__title
+    display: flex
+    justify-content: space-between
+    margin-bottom: 70px
+  &__main
+    &__title
+      margin-bottom: 20px
+
+.graph
+  height: 150px
+  background: #000
+  margin-bottom: 40px
+.graph__coin
+  position: relative
+  display: flex
+  align-items: center
+  margin-right: 15px
+
+.coin
+  &__price
+    margin-left: 15px
+    &--down
+      position: absolute
+      bottom: -25px
+      right: 0
+      color: #F05D55
+
+.disclaimer
+  color: $white
+  text-decoration: none
+
+.fund
+  &__title
+    max-width: 250px
+    &__container
+      display: flex
+      margin-bottom: 100px
+  &__menu
+    display: flex
+    width: 100%
+    justify-content: space-evenly
+  &__item
+    color: #c5c5c5
+    font-size: 12px
+    max-width: 120px
+  &__brands
+    margin-bottom: 100px
+
+.brands
+  &__menu
+    display: flex
+    justify-content: space-around
+  &__item
+    border-radius: 50%
+    background: rgba(255, 255, 255, 0.1)
+    width: 100px
+    height: 100px
+    display: flex
+    align-items: center
+    justify-content: center
+    color: $white
+
+.main
+  margin-bottom: 120px
+  .container
+    display: flex
+  &__facts
+    padding-right: 100px
+    flex: 1
+    &__title
+      margin-bottom: 30px
+    &__item
+      margin-bottom: 30px
+  &__graph
+    flex: 1
+    &__container
+      margin-bottom: 30px
+    &__title
+      margin-top: 15px
+      margin-bottom: 30px
+    &__graph
+      height: 200px
+      background: #333
+      margin-bottom: 30px
+    &__labels
+      display: flex
+      align-items: center
+      margin-bottom: 60px
+
+.graph__label
+  margin-right: 50px
+
+.shape
+  margin-right: 10px
+  margin-bottom: 3px
+  border-color: #F05D55
+  &--circle
+    border-radius: 50%
+    height: 12px
+    width: 12px
+    border: 3px solid #F05D55
+  &--arrow
+    height: 12px
+    width: 12px
+    border-left: 2px solid
+    border-top: 2px solid
+    transform: rotate(45deg)
+    margin-right: 20px
+  &--primary
+    border-color: $primary
+  &--secondary
+    border-color: $secondary
+
+.daily
+  display: flex
+  &__container
+    flex: 1
+    margin-bottom: 50px
+    &:first-of-type
+      border-right: 1px solid rgba(255, 255, 255, 0.1)
+    &:last-of-type
+      padding-left: 40px
+  &__title
+    &__wrapper
+      display: flex
+      align-items: center
+      margin-bottom: 30px
+  &__item
+    margin-bottom: 30px
+    &:last-of-type
+      margin-bottom: 0
+    &__perc
+      &__wrapper
+        display: flex
+        align-items: center
+    &__desc
+      padding-left: 34px
+      font-size: 14px;
+
+.security
+  position: relative
+  margin-bottom: 120px
+  .container
+    position: relative
+  &__bg
+    background-image: url('../assets/security.jpg')
+    position: absolute
+    background-position: 50% 20%
+    background-repeat: no-repeat
+    background-size: cover
+    z-index: -1
+    top: 0
+    left: 0
+    max-height: 300px
+    width: 100%
+    height: 100%
+    &::after
+      position: absolute
+      top: 0
+      left: 0
+      content: ''
+      background-image: linear-gradient(to bottom, rgba(25, 30, 36, 0.7), rgb(25, 30, 36))
+      height: 100%
+      width: 100%
+  &__item
+    text-align: center
+    &.first
+      padding-top: 80px
+      margin-bottom: 120px
+    &__img
+      width: 24px
+      height: 24px
+      margin-bottom: 20px
+  &__title, &__body
+    max-width: 500px
+    margin: 0 auto 30px
+
+.people
+  margin-bottom: 50px
+  &__title
+    margin-bottom: 100px
+  &__list
+    display: flex
+    flex-wrap: wrap
+  &__card
+    position: relative
+    text-align: center
+    padding: 90px 50px 45px
+    margin-bottom: 100px
+    flex: 0 0 32%
+    background: #232A32
+    &:nth-of-type(2),
+    &:nth-of-type(5)
+      margin-left: 15px
+      margin-right: 15px
+    &__img
+      width: 120px
+      height: 120px
+      position: absolute
+      border-radius: 50%
+      left: 50%
+      top: -60px
+      transform: translateX(-50%)
+      box-shadow: 0 5px 24px 2px #181919
+    &__name
+      margin-bottom: 10px
+    &__position
+      display: inline-block
+      font-weight: 500
+      color: #000
+      background: $white
+      padding: 0 5px
+      margin-bottom: 15px
+
+.companies
+  text-align: center;
+  margin: 0 auto 120px
+  display: flex
+  max-width: 900px
+  justify-content: space-around
+  &__item
+    flex: 1
+
+.investing
+  margin-bottom: 120px
+  .container
+    display: flex
+  &__graph, &__split
+    flex: 1
+  &__split
+    padding-right: 100px
+  &__title
+    max-width: 250px
+  &__body, &__title
+    margin-bottom: 30px
+
+.footer
+  margin-bottom: 120px
+  .container
+    display: flex
+  &__newsletter
+    padding-right: 100px
+    flex: 1
+    .btn
+      margin-left: 15px
+  &__contact
+    display: flex
+    flex-direction: column
+    flex: 1
+    justify-content: flex-end
+  &__copyrights
+    margin-bottom: 15px
+    text-align: right
+    color: $white
+
+.socials
+  margin-bottom: 15px
+  display: flex
+  justify-content: flex-end
+  &__item
+    margin-left: 10px
+    height: 16px
+    width: 16px
+  &__logo
+    height: 100%
+    width: 100%
+
+.newsletter
+  &__title
+    margin-bottom: 20px
+  &__input
+    padding: 7px 0
+    position: relative
+    background: none
+    border: none
+    outline: none
+    border-bottom: 2px solid $white
+    flex: 1
+    &__group
+      display: flex
+
+.credit
+  margin-top: 50px
+  text-align: center
+  a
+    color: $white

@@ -49,7 +49,7 @@ body {
   color: var(--main-text);
   background: var(--body-gradient);
   min-height: 100vh;
-  background-attachment: fixed;
+  background: linear-gradient(61deg, rgba(60,70,82,1) 0%, rgba(73,82,92,1) 18%, rgba(38,45,53,1) 100%)
 }
 
 button,
