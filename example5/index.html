@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,600,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Example 5</title>
+</head>
+
+<body>
+  <header class="nav__header">
+    <div class="container">
+      <nav class="nav">
+        <a class="nav__logo" href="#">Love Travel</a>
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__link" href="#">Login</a></li>
+          <li class="menu__item"><a class="menu__link menu__link--bordered" href="#">Create Account</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <header class="page--header">
+    <div class="container">
+      <h1 class="header__title">Discover</h1>
+      <h2 class="header__sub-title">Explore the world</h2>
+      <p class="header__body">
+        I see my path, but i don't know where it leads.
+        Not knowing where I'm going is what inspires me to travel it.
+      </p>
+
+      <section class="travel">
+
+        <div class="input-group">
+          <label class="label" for="Travel">Travel</label>
+          <input class="input" type="text" placeholder="What would you like to do?">
+        </div>
+
+        <div class="input-group">
+          <label class="label" for="Travel">Anywhere</label>
+          <input class="input" type="text" placeholder="Where would you like to go?">
+        </div>
+
+        <button class="btn btn--primary">Search</button>
+      </section>
+
+      <section class="experience">
+
+        <div class="experience__item">
+          <img class="experience__icon" src="assets/villa.svg" alt="house">
+          <div class="experience__text">
+            <h3 class="experience__title">Exceptional Houses</h3>
+            <p class="experience__body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laborum eaque deleniti culpa.
+            </p>
+            <a class="menu__link menu__link--primary menu__link--with-arrow" href="#">Learn More</a>
+          </div>
+        </div>
+
+        <div class="experience__item">
+          <img class="experience__icon" src="assets/life-buoy.svg" alt="house">
+          <div class="experience__text">
+            <h3 class="experience__title">Support</h3>
+            <p class="experience__body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laborum eaque deleniti culpa.
+            </p>
+            <a class="menu__link menu__link--primary menu__link--with-arrow" href="#">Learn More</a>
+          </div>
+        </div>
+
+        <div class="experience__item">
+          <img class="experience__icon" src="assets/globe.svg" alt="house">
+          <div class="experience__text">
+            <h3 class="experience__title">Original Experience</h3>
+            <p class="experience__body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laborum eaque deleniti culpa.
+            </p>
+            <a class="menu__link menu__link--primary menu__link--with-arrow" href="#">Learn More</a>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </header>
+
+  <section class="places">
+    <div class="container">
+
+      <section class="places__header">
+        <h1 class="places__title">Featured Places</h1>
+        <a class="menu__link menu__link--with-arrow" href="#">See all</a>
+      </section>
+
+      <section class="card__menu">
+
+        <div class="card">
+          <figure class="photo">
+            <img class="photo__img" src="assets/beach.jpeg" alt="beach">
+            <figcaption class="photo__caption">
+              <span>
+                <i class="far fa-heart"></i>
+                4.7K Likes
+              </span>
+              <i class="far fa-bookmark"></i>
+            </figcaption>
+          </figure>
+          <div class="card__text">
+            <h2 class="card__title">Havelock Island</h2>
+            <p class="card__body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Tempora eveniet minus aliquid maiores, animi excepturi. Ab ipsa possimus quia quibusdam atque dolorum
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <figure class="photo">
+            <img class="photo__img" src="assets/cabins-on-a-beach.jpeg" alt="beach">
+            <figcaption class="photo__caption">
+              <span>
+                <i class="far fa-heart"></i>
+                3K Likes
+              </span>
+              <i class="fas fa-bookmark"></i>
+            </figcaption>
+          </figure>
+          <div class="card__text">
+            <h2 class="card__title">Havelock Island</h2>
+            <p class="card__body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Tempora eveniet minus aliquid maiores, animi excepturi. Ab ipsa possimus quia quibusdam atque dolorum
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <figure class="photo">
+            <img class="photo__img" src="assets/falls.jpeg" alt="beach">
+            <figcaption class="photo__caption">
+              <span>
+                <i class="fas fa-heart"></i>
+                5K Likes
+              </span>
+              <i class="far fa-bookmark"></i>
+            </figcaption>
+          </figure>
+          <div class="card__text">
+            <h2 class="card__title">Havelock Island</h2>
+            <p class="card__body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Tempora eveniet minus aliquid maiores, animi excepturi. Ab ipsa possimus quia quibusdam atque dolorum
+            </p>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </section>
+
+  <section class="places">
+    <div class="container">
+
+      <section class="places__header">
+        <h1 class="places__title">Exceptional Houses</h1>
+        <a class="menu__link menu__link--with-arrow" href="#">See all</a>
+      </section>
+
+      <section class="card__menu">
+
+        <div class="card">
+          <figure class="photo">
+            <img class="photo__img" src="assets/red_sunset.jpeg" alt="red sunset">
+            <figcaption class="photo__caption">
+              <span>
+                <i class="far fa-heart"></i>
+                4.7K Likes
+              </span>
+              <i class="far fa-bookmark"></i>
+            </figcaption>
+          </figure>
+          <div class="card__text">
+            <h2 class="card__title">Havelock Island</h2>
+            <p class="card__body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Tempora eveniet minus aliquid maiores, animi excepturi. Ab ipsa possimus quia quibusdam atque dolorum
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <figure class="photo">
+            <img class="photo__img" src="assets/houses.jpeg" alt="houses">
+            <figcaption class="photo__caption">
+              <span>
+                <i class="far fa-heart"></i>
+                3K Likes
+              </span>
+              <i class="fas fa-bookmark"></i>
+            </figcaption>
+          </figure>
+          <div class="card__text">
+            <h2 class="card__title">Havelock Island</h2>
+            <p class="card__body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Tempora eveniet minus aliquid maiores, animi excepturi. Ab ipsa possimus quia quibusdam atque dolorum
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <figure class="photo">
+            <img class="photo__img" src="assets/villa.jpeg" alt="beach">
+            <figcaption class="photo__caption">
+              <span>
+                <i class="fas fa-heart"></i>
+                5K Likes
+              </span>
+              <i class="far fa-bookmark"></i>
+            </figcaption>
+          </figure>
+          <div class="card__text">
+            <h2 class="card__title">Havelock Island</h2>
+            <p class="card__body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Tempora eveniet minus aliquid maiores, animi excepturi. Ab ipsa possimus quia quibusdam atque dolorum
+            </p>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </section>
+
+  <section class="destination">
+    <div class="destination__bg"></div>
+    <div class="container">
+      <h1 class="destination__title">Our Destinations</h1>
+      <p class="destination__body">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Aliquam ad explicabo repellendus non reprehenderit sapiente velit voluptatem autem qui,
+        incidunt culpa dignissimos eum itaque eaque adipisci saepe, ipsa facilis facere.
+      </p>
+      <a class="menu__link menu__link--primary" href="#">More Places</a>
+    </div>
+  </section>
+
+  <section class="clients">
+    <div class="container">
+      <div class="clients__header">
+        <h1 class="clients__title">Our Client Stories</h1>
+        <a class="menu__link menu__link--with-arrow" href="#">See all</a>
+      </div>
+
+      <div class="stories">
+        <div class="story story--slide-in" data-page="1">
+          <div class="story__header">
+            <figure class="story__photo">
+              <img class="story__img" src="https://randomuser.me/api/portraits/women/2.jpg" alt="woman">
+            </figure>
+            <div class="title__wrapper">
+              <h2 class="story__title">Chegu Lebara</h2>
+              <span class="story__position">Production Manager</span>
+            </div>
+          </div>
+          <p class="story__body">
+            "It has completely changes the way we work. Discon makes it really easy to organize
+            all our different versions while keeping all our feedback efficient."
+          </p>
+        </div>
+
+        <div class="story story--slide-in" data-page="1">
+          <div class="story__header">
+            <figure class="story__photo">
+              <img class="story__img" src="https://randomuser.me/api/portraits/men/20.jpg" alt="man">
+            </figure>
+            <div class="title__wrapper">
+              <h2 class="story__title">Zihad Islam</h2>
+              <span class="story__position">Founder & CEO</span>
+            </div>
+          </div>
+          <p class="story__body">
+            "It has completely changes the way we work. Discon makes it really easy to organize
+            all our different versions while keeping all our feedback efficient."
+          </p>
+        </div>
+
+        <div class="story" data-page="2">
+          <div class="story__header">
+            <figure class="story__photo">
+              <img class="story__img" src="https://randomuser.me/api/portraits/women/52.jpg" alt="woman">
+            </figure>
+            <div class="title__wrapper">
+              <h2 class="story__title">Zihad Islam</h2>
+              <span class="story__position">Founder & CEO</span>
+            </div>
+          </div>
+          <p class="story__body">
+            "It has completely changes the way we work. Discon makes it really easy to organize
+            all our different versions while keeping all our feedback efficient."
+          </p>
+        </div>
+
+        <div class="story" data-page="2">
+          <div class="story__header">
+            <figure class="story__photo">
+              <img class="story__img" src="https://randomuser.me/api/portraits/men/62.jpg" alt="man">
+            </figure>
+            <div class="title__wrapper">
+              <h2 class="story__title">Zihad Islam</h2>
+              <span class="story__position">Founder & CEO</span>
+            </div>
+          </div>
+          <p class="story__body">
+            "It has completely changes the way we work. Discon makes it really easy to organize
+            all our different versions while keeping all our feedback efficient."
+          </p>
+        </div>
+
+        <div class="story" data-page="3">
+          <div class="story__header">
+            <figure class="story__photo">
+              <img class="story__img" src="https://randomuser.me/api/portraits/women/68.jpg" alt="woman">
+            </figure>
+            <div class="title__wrapper">
+              <h2 class="story__title">Zihad Islam</h2>
+              <span class="story__position">Founder & CEO</span>
+            </div>
+          </div>
+          <p class="story__body">
+            "It has completely changes the way we work. Discon makes it really easy to organize
+            all our different versions while keeping all our feedback efficient."
+          </p>
+        </div>
+
+        <div class="story" data-page="3">
+          <div class="story__header">
+            <figure class="story__photo">
+              <img class="story__img" src="https://randomuser.me/api/portraits/men/68.jpg" alt="man">
+            </figure>
+            <div class="title__wrapper">
+              <h2 class="story__title">Zihad Islam</h2>
+              <span class="story__position">Founder & CEO</span>
+            </div>
+          </div>
+          <p class="story__body">
+            "It has completely changes the way we work. Discon makes it really easy to organize
+            all our different versions while keeping all our feedback efficient."
+          </p>
+        </div>
+
+
+      </div>
+
+      <div class="bullet__menu">
+        <div class="bullet__wrapper" data-page="1">
+          <span class="bullet bullet--active"></span>
+        </div>
+        <div class="bullet__wrapper" data-page="2">
+          <span class="bullet"></span>
+        </div>
+        <div class="bullet__wrapper" data-page="3">
+          <span class="bullet"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="waterfall">
+    <figure class="waterfall__figure">
+      <img class="waterfall__img" src="assets/waterfall.jpeg" alt="waterfall">
+    </figure>
+    <div class="container">
+      <h3 class="waterfall__sub-title">Best Travel Places 2017</h3>
+      <h1 class="waterfall__title">Waterfall Iceland</h1>
+      <a class="menu__link" href="#">Read the full article</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <section class="get-started">
+        <div class="input-group">
+          <label class="label" for="Name">Name</label>
+          <input class="input" type="text" placeholder="Full Name">
+        </div>
+
+        <div class="input-group">
+          <label class="label" for="Travel">Email</label>
+          <input class="input" type="text" placeholder="Email">
+        </div>
+
+        <button class="btn btn--primary">Get Started</button>
+      </section>
+
+      <section class="about">
+        <div class="about__item">
+          <h4 class="about__title">Love Travel</h4>
+          <span>hi@lovetravel.com</span>
+          <span>+48 555 111 313 (Sales)</span>
+          <span>+48 555 121 323 (Office)</span>
+          <span>ul. Wojskova 6</span>
+        </div>
+        <div class="about__item">
+          <h4 class="about__title">Main Categories</h4>
+          <ul class="menu">
+            <li><a class="menu__link" href="#">Services</a></li>
+            <li><a class="menu__link" href="#">Leadership</a></li>
+            <li><a class="menu__link" href="#">Careers</a></li>
+            <li><a class="menu__link" href="#">Blog</a></li>
+            <li><a class="menu__link" href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="about__item">
+          <h4 class="about__title">About</h4>
+          <ul class="menu">
+            <li><a class="menu__link" href="#">Services</a></li>
+            <li><a class="menu__link" href="#">Leadership</a></li>
+            <li><a class="menu__link" href="#">Careers</a></li>
+            <li><a class="menu__link" href="#">Blog</a></li>
+            <li><a class="menu__link" href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="about__item">
+          <h4 class="about__title">Our Newsletter</h4>
+          <p class="newsletter__body">
+            Subscribe to our newsletter and we will inform
+            you about our promotions
+          </p>
+          <input class="input" type="text" placeholder="Enter your email">
+        </div>
+      </section>
+
+      <p class="credit">Designed by <a class="credit__link" href="https://dribbble.com/Joy_74" target="_blank">Masudur</a></p>
+    </div>
+  </footer>
+  <script src="js/client.js"></script>
+</body>
+
+</html>
