@@ -28,7 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
     bullets.forEach(bullet => bullet.classList.remove('bullet--active'));
   }
 
-   function slideStories(pageNumber) {
+  // Functions
+  function slideStories(pageNumber) {
     stories.forEach(async story => {
       if (story.getAttribute('data-page') != pageNumber) {
         if (story.classList.contains('story--slide-in')) {
