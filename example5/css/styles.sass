@@ -239,27 +239,29 @@ textarea
       color: $primary-blue
 
 .destination
-  position: relative
   background: #17141b
+  position: relative
   display: flex
   align-items: center
-  height: 800px
   &__bg
+    width: 100%
+    max-width: 100%
+    object-fit: contain
+  .container
     position: absolute
+    display: flex
+    flex-direction: column
+    justify-content: center
     top: 0
     left: 0
     right: 0
     height: 100%
-    z-index: -1
-    background-image: url(http://api.thumbr.it/whitenoise-361x370.png?background=323e4200&noise=b8b8b8&density=9&opacity=13)
-  .container
-    flex: 1
   &__title
     color: #FFF
     font-weight: 400
     font-family: Playfair Display, serif
   &__body
-    color: #bfbfbf
+    color: #fdfdfd
     font-size: 18px
     max-width: 500px
     margin: 20px 0
@@ -440,13 +442,16 @@ textarea
 
 @media (max-width: 1199px)
   .container
-    max-width: 768px
+    max-width: 900px
+
   .travel, .get-started
     margin: 0 auto 80px
     flex-direction: column
     align-items: stretch
+
   .input-group
     margin-bottom: 20px
+
   .input, .btn
     width: 100%
 
@@ -459,15 +464,25 @@ textarea
     width: 100%
     margin-bottom: 40px
 
-  .story
-    width: 100%
-    margin-bottom: 40px
-
   .about__item
     flex-basis: 45%
     margin-bottom: 40px
     &:nth-of-type(1), &:nth-of-type(4)
       order: -1
+
+  .clients
+    padding-bottom: 30px
+    &__header
+      margin-bottom: 80px
+
+  .story
+    padding: 20px
+    margin-bottom: 30px
+    &__photo
+      width: 90px
+      height: 90px
+    &__body
+      font-size: 18px
 
   .waterfall
     .container
@@ -481,7 +496,17 @@ textarea
     .input-group
       flex: 0.8
 
+
 @media (max-width: 767px)
+  .stories
+    justify-content: center
+
+  .story
+    width: 75%
+
+  .bullet__menu
+    display: none
+
   .waterfall
     .container
       bottom: 20px
@@ -515,6 +540,13 @@ textarea
       margin-bottom: 20px
     .menu__link
       margin-left: 0
+  .destination
+    .menu__link
+      margin: 20px 0
+    .container
+      justify-content: flex-end
+    &__body
+      display: none
 
   .clients
     padding-bottom: 0
@@ -527,6 +559,7 @@ textarea
       margin: 0 auto
 
   .story
+    width: 100%
     padding: 20px
     &__header
       flex-direction: column
