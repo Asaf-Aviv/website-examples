@@ -14,14 +14,14 @@
 <body>
   <header class="nav__header">
     <nav class="nav">
-      <div class="nav__logo">A.</div>
+      <a class="nav__logo" href="#">A.</a>
       <ul class="nav__menu">
         <li class="nav__menu__item"><a class="nav__menu__link" href="#">Fund</a></li>
         <li class="nav__menu__item"><a class="nav__menu__link" href="#">Index</a></li>
         <li class="nav__menu__item"><a class="nav__menu__link" href="#">About</a></li>
         <li class="nav__menu__item"><a class="nav__menu__link" href="#">Financial Professionals</a></li>
+        <button class="btn btn--primary">Schedule Call</button>
       </ul>
-      <button class="btn btn--primary">Schedule Call</button>
     </nav>
   </header>
 
@@ -43,20 +43,20 @@
           <div class="graph__coin">
             <div class="shape shape--circle shape--primary"></div>
             <span class="coin__item">HOLD 10</span>
-            <h5 class="coin__price">1364.9%</h5>
-            <span class="coin__price--down">-5.98%</span>
+            <h5 class="coin__price">1364.9%<span class="coin__price--down">-5.98%</span></h5>
+
           </div>
           <div class="graph__coin">
             <div class="shape shape--circle shape--secondary"></div>
             <span class="coin__item">Bitcoin</span>
-            <h5 class="coin__price">847.3%</h5>
-            <span class="coin__price--down">-6.14%</span>
+            <h5 class="coin__price">847.3%<span class="coin__price--down">-6.14%</span></h5>
+
           </div>
           <div class="graph__coin">
             <div class="shape shape--circle"></div>
             <span class="coin__item">S&P 500</span>
-            <h5 class="coin__price">21.1%</h5>
-            <span class="coin__price--down">-0.10%</span>
+            <h5 class="coin__price">21.1%<span class="coin__price--down">-0.10%</span></h5>
+
           </div>
         </div>
         <div class="graph__main">
@@ -384,7 +384,7 @@
       </section>
 
     </div>
-    <p class="credit">Designed by <a href="https://dribbble.com/goutham-aj" target="_blank">Goutham</a></p>
+    <p class="credit">Designed by <a class="credit__link" href="https://dribbble.com/goutham-aj" target="_blank">Goutham</a></p>
   </footer>
 
   <script src="js/client.js"></script>

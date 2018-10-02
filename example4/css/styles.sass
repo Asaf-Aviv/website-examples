@@ -74,12 +74,37 @@ h6
   margin: 0 auto
   padding: 0 15px
 
+.btn
+  padding: 0 30px
+  background: none
+  border-radius: 50px
+  height: 50px
+  color: $white
+  border: 2px solid
+  transition: background 200ms
+  outline: none
+  &-group
+    display: flex
+  &--primary
+    border-color: $primary
+    &:hover
+      background: $primary
+  &--secondary
+    border-color: $secondary
+    &:hover
+      background: $secondary
+
 .nav
   display: flex
-  align-items: center
+  flex-wrap: wrap
+  margin: 0 auto
+  padding: 0 15px
+  max-width: 1400px
+  transition: transform 300ms
   &__header
-    padding: 50px 200px
+    padding: 50px 0
   &__logo
+    text-decoration: none
     font-size: 32px
     color: $white
   .btn
@@ -89,6 +114,8 @@ h6
     display: flex
     list-style: none
     justify-content: space-between
+    align-items: center
+    transition: transform 300ms
     &__link
       display: block
       transition: color 200ms
@@ -98,19 +125,6 @@ h6
       margin-left: 20px
       &:hover
         color: #c5c5c5
-
-.btn
-  padding: 0 30px
-  background: none
-  border-radius: 50px
-  height: 50px
-  color: $white
-  border: 2px solid
-  transition: background 200ms
-  &--primary
-    border-color: $primary
-  &--secondary
-    border-color: $secondary
 
 .page__header
   margin: 120px 0
@@ -146,11 +160,12 @@ h6
 
 .coin
   &__price
+    position: relative
     margin-left: 15px
     &--down
       position: absolute
       bottom: -25px
-      right: 0
+      left: 0
       color: #F05D55
 
 .disclaimer
@@ -163,6 +178,7 @@ h6
     &__container
       display: flex
       margin-bottom: 100px
+      flex-wrap: wrap
   &__menu
     display: flex
     width: 100%
@@ -192,6 +208,7 @@ h6
   margin-bottom: 120px
   .container
     display: flex
+    flex-wrap: wrap
   &__facts
     padding-right: 100px
     flex: 1
@@ -309,6 +326,7 @@ h6
     margin-bottom: 100px
   &__list
     display: flex
+    justify-content: space-between
     flex-wrap: wrap
   &__card
     position: relative
@@ -317,10 +335,6 @@ h6
     margin-bottom: 100px
     flex: 0 0 32%
     background: #232A32
-    &:nth-of-type(2),
-    &:nth-of-type(5)
-      margin-left: 15px
-      margin-right: 15px
     &__img
       width: 120px
       height: 120px
@@ -406,9 +420,171 @@ h6
     flex: 1
     &__group
       display: flex
+      flex-wrap: wrap
 
 .credit
   margin-top: 50px
   text-align: center
-  a
+  &__link
     color: $white
+
+@media (max-width: 1400px)
+  .nav
+    max-width: 1200px
+
+  .container
+    max-width: 900px
+
+  .page__header
+    &__section
+      margin-bottom: 50px
+      padding-right: 0
+    .container
+      flex-direction: column
+
+@media (max-width: 1200px)
+  .nav, .container
+    max-width: 900px
+
+
+@media (max-width: 900px)
+  .nav, .container
+    max-width: 786px
+
+@media (max-width: 800px)
+  .main__facts
+    padding-right: 50px
+
+@media (max-width: 768px)
+  .nav__header
+    .nav
+      &__logo
+        text-align: center
+        width: 100%
+      &__menu
+        position: fixed
+        background: #191e24
+        height: 100vh
+        transform: translateX(-100%)
+        padding-top: 10vh
+        top: 0
+        left: 0
+        width: 70%
+        flex-direction: column
+        z-index: 999
+        align-items: flex-start
+        justify-content: flex-start
+        &__item
+          margin-bottom: 20px
+        .btn
+          margin-left: 20px
+
+  h1
+    font-size: 40px
+  .people
+    &__title
+      text-align: center
+    &__card
+      flex-basis: 48%
+
+  .fund
+    &__brands
+      margin-bottom: 50px
+    &__title
+      text-align: center
+      width: 100%
+      max-width: 100%
+      margin-bottom: 30px
+      &__container
+        margin-bottom: 30px
+    &__item
+      max-width: 100%
+      flex: 1
+      font-size: 18px
+      margin-bottom: 30px
+
+  .main
+    .container
+      flex-direction: column
+    &__facts
+      padding-right: 0
+
+  .companies
+    flex-direction: column
+    align-items: center
+    &__item
+      margin-bottom: 30px
+
+  .investing
+    .container
+      flex-direction: column
+      .btn
+        margin-bottom: 30px
+    &__split
+      padding-right: 0
+    &__title
+      max-width: 100%
+
+  .footer
+    &__newsletter
+      margin-bottom: 30px
+      padding-right: 0
+      width: 100%
+    .container
+      flex-direction: column
+      align-items: stretch
+    &__copyrights
+      text-align: center
+    &__contact
+      .nav
+        width: 100%
+        &__menu
+          flex: 1
+          &__link
+            margin: 0
+  .socials
+    justify-content: center
+
+@media (max-width: 600px)
+  .graph
+    &__label
+      margin-right: 20px
+    &__title
+      display: block
+    &__coin
+      max-width: 200px
+      margin: 0 auto 30px
+
+  .coin__item
+    width: 70px
+
+  .fund__item__body
+    text-align: center
+  .people__card
+    flex-basis: 100%
+
+  .btn--group
+    display: flex
+    justify-content: space-around
+
+  .graph
+    &__title
+      flex-direction: column
+      align-items: center
+    &__coin
+      margin-bottom: 30px
+
+  .fund__menu,
+  .brands__menu
+    flex-direction: column
+    align-items: center
+  .brands__item
+      margin-bottom: 30px
+
+  .newsletter
+    &__input
+      margin-bottom: 20px
+      &__group
+        .btn
+          margin: 0
+          width: 100%
