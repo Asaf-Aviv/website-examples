@@ -1,0 +1,594 @@
+$main-green: #30DB87
+$main-text: #313A59
+$info-primary: #d6d6d6
+$info-secondary: #8a8a8a
+$nav-bg: #313A59
+$shadow-color: #d9d9d9
+$footer-bg: #27304B
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  &::before, &::after
+    box-sizing: border-box
+
+body
+  font-family: 'Exo', sans-serif
+  padding-top: 75px
+  color: $main-text
+
+button, input, textarea
+  font-family: inherit
+
+.bold
+  font-weight: 600
+
+.divider
+  height: 1px
+  background: #545454
+
+.btn--group
+  display: flex
+
+.btn
+  letter-spacing: .5px
+  display: inline-block
+  cursor: pointer
+  border-radius: 5px
+  color: $main-text
+  background: none
+  border: none
+  height: 35px
+  font-weight: bold
+  transition: transform 150ms, background 150ms, color 150ms
+  &:hover
+    transform: translateY(-2px)
+  &--small
+    height: 20px
+    width: 60px
+  &--big
+    height: 50px
+    min-width: 150px
+  &--primary
+    background: $main-green
+    text-transform: uppercase
+    color: #fff
+  &--secondary
+    background: $main-text
+    color: #fff
+  &--bordered-base
+    border: 1px solid #dadada
+  &--bordered-primary
+    border: 1px solid $main-green
+  &--bordered-secondary
+    border: 1px solid $main-text
+  &--shadow
+    box-shadow: 0 3px 10px 0 #939393
+
+.form
+  padding: 30px
+  display: flex
+  flex-direction: column
+  &__title
+    color: $main-green
+    padding-bottom: 20px
+    border-bottom: 1px solid #e4e4e4
+    margin-bottom: 30px
+
+.label
+  font-weight: 600
+  margin-bottom: 3px
+
+.input
+  padding: 10px
+  border-radius: 5px
+  border: 0
+  margin-bottom: 20px
+  box-shadow: 0px 1px 2px 1px #cfcfcf
+  &:focus
+    outline-color: $main-green
+
+.container
+  max-width: 1200px
+  padding: 0 15px
+  margin: 0 auto
+
+.hamburger
+  cursor: pointer
+  display: none
+
+.header
+  padding: 10px 0
+  background: $nav-bg
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 1000
+  box-shadow: 0 3px 3px #313a5896
+
+.nav
+  display: flex
+  will-change: transform
+  transition: transform 250ms
+  &--open
+    transform: translateX(0%) !important
+  &--toggler
+    background: none
+    border: none
+    outline: 0
+  &__brand
+    font-size: 24px !important
+  &__menu
+    display: flex
+    align-items: center
+    list-style: none
+    flex: 3
+    &__fill
+      cursor: pointer
+      background: rgba(0, 0, 0, 0.2)
+    .divider
+      display: none
+    .nav__title:not(.nav__brand)::before
+      position: absolute
+      content: ''
+      bottom: 0
+      left: calc(50% - 5px)
+      height: 3px
+      width: 10px
+      background: $main-green
+  &__item
+    position: relative
+    margin-left: 15px
+    &:first-of-type
+      margin: 0
+    &:nth-of-type(2)
+      margin-left: auto
+    &--hidden-md
+      display: none
+  &__link
+    display: block
+    color: #fff
+    cursor: pointer
+    padding: 15px 10px
+    text-decoration: none
+    letter-spacing: 2px
+    font-weight: 500
+    transition: color 250ms
+    &:hover
+      color: $main-green
+  &__title
+    position: relative
+    text-transform: uppercase
+    font-weight: bold
+    color: $main-green
+  &__signup
+    background: #fff
+    position: absolute
+    width: 350px
+    right: 28px
+    bottom: -365px
+    border-left: 5px solid $main-green
+    border-radius: 5px
+    box-shadow: 2px 2px 5px 2px $shadow-color
+    transition: transform 100ms ease-out
+    transform: scale(0)
+    transform-origin: top right
+    &--open
+      transform: scale(1)
+    &::before
+      content: ''
+      position: absolute
+      top: -15px
+      right: 5px
+      border-left: 15px solid transparent
+      border-right: 15px solid transparent
+      border-bottom: 15px solid $main-green
+
+.form__signup
+  input:last-of-type
+    margin-bottom: 30px
+  .btn--group .btn
+    &:first-child
+      flex: 2
+      margin-right: 1rem
+    &:last-child
+      flex: 1
+
+.main
+  display: flex
+  padding: 10% 0
+  .container
+    flex: 1
+    display: flex
+    flex-direction: column
+    justify-content: center
+  &__title
+    font-size: 45px
+    font-weight: 700
+    line-height: 1.2
+    margin-bottom: 60px
+    max-width: 600px
+    text-shadow: 1px 1px 1px #313a5885
+  &__body
+    line-height: 2
+    letter-spacing: .5px
+    margin-bottom: 80px
+    max-width: 500px
+  .btn--group
+    margin-bottom: 30px
+  .btn--primary
+    margin-right: 30px
+
+.section
+  background: #dbf5ef
+  padding: 150px 0
+  .container
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+.card
+  display: flex
+  flex-flow: column wrap
+  border-top-left-radius: 10px
+  border-top-right-radius: 10px
+  border-bottom: 10px solid $main-green
+  background: #fff
+  opacity: 0
+  flex: 1
+  padding: 50px 40px
+  box-shadow: 0 10px 30px $shadow-color
+  &:nth-child(2)
+    margin: 0 2rem
+  &__title
+    text-align: center
+    margin: 35px 0
+    letter-spacing: .5px
+  &__body
+    letter-spacing: .5px
+    line-height: 2
+    margin-bottom: 40px
+  &__footer
+    display: flex
+    justify-content: flex-end
+    .btn
+      flex: 1
+  &__img
+    display: block
+    background: rgba(169, 255, 188, 0.25)
+    border-radius: 10px
+    padding: 15px
+    height: 100%
+    &__container
+      flex-basis: 132px
+      height: 132px
+      align-self: center
+      border: 1px solid $main-green
+      padding: 10px
+      border-radius: 10px
+
+.faq
+  &__section
+    padding: 100px 0 200px 0
+  &__title
+    text-align: center
+    margin-bottom: 80px
+    font-size: 35px
+    text-shadow: 1px 1px 1px #313a5885
+  &__cards__container
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-evenly
+  &__card
+    display: inline-flex
+    flex-basis: 45%
+    margin-bottom: 60px
+    padding: 2rem
+    box-shadow: 0 2px 10px 2px #dfdfdf
+    &__title
+      margin-bottom: 20px
+    &__body
+      max-width: 400px
+      line-height: 2
+  &__text__group
+    margin-left: 20px
+
+
+
+.subscribe
+  padding: 40px 100px
+  height: 100%
+  border-radius: 15px
+  background-image: linear-gradient(to left, #30db87, #00b4a3, #00687b)
+  box-shadow: 0 10px 30px -8px #10131f
+  &__wrapper
+    position: absolute
+    padding: 0 15px
+    width: 100%
+    top: -137px
+    left: 0
+  &__header
+    display: flex
+    align-items: flex-start
+    flex-wrap: wrap
+    letter-spacing: 1px
+    color: #fff
+  &__title
+    flex: 1 1
+    font-size: 40px
+    font-weight: 600
+  &__body
+    flex: 1.5 2
+    line-height: 2
+  &__form
+    padding: 40px 0
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    .btn
+      flex: 1
+      box-shadow: 0 10px 30px -8px #10131f
+  &__input
+    margin-right: 30px
+    flex: 2
+    border: 0
+    height: 50px
+    font-size: 18px
+    padding-left: 10px
+    border-radius: 5px
+    box-shadow: 0px 1px 2px 1px $shadow-color
+    &:focus
+      outline-color: $footer-bg
+
+.contact
+  &__section
+    display: flex
+    padding: 80px 0
+    letter-spacing: 1px
+  &__item
+    display: flex
+  &__img
+    height: 100%
+    width: 100%
+    &__container
+      flex-basis: 70px
+      height: 70px
+      border-radius: 50%
+      padding: 20px
+      background: rgba(255, 255, 255, 0.2)
+  &__info
+    margin-left: 20px
+
+.info
+  &__title
+    color: $info-primary
+    display: block
+    margin-bottom: 10px
+  &__body
+    color: $info-secondary
+
+.footer
+  background: $footer-bg
+  .container
+    position: relative
+    padding: 150px 15px 50px 15px
+  &__description
+    flex: 2
+    padding: 30px 50px 30px 0
+  &__nav
+    flex: 1
+    padding: 30px 50px 30px 0
+    &__section
+      display: flex
+      flex-wrap: wrap
+      padding: 50px 0
+    &__title
+      color: $info-primary
+      margin-bottom: 35px
+      font-weight: 600
+      color: #f1aa3d
+    &__text
+      color: #f6f6f6
+      line-height: 2
+      max-width: 500px
+  &__menu
+    list-style: none
+    &--link
+      display: inline-block
+      text-decoration: none
+      padding: 10px 0
+      color: $info-primary
+      &:hover
+        text-decoration: underline
+  &__copyrights
+    color: $info-primary
+
+.text-primary, .text-secondary
+  color: $main-green
+
+@media (max-width: 1177px)
+  .footer
+    &__description
+      flex-basis: 100vw
+      padding-right: 0
+    &__nav
+      padding: 30px 0
+
+@media (max-width: 1100px)
+  .card
+    padding: 50px 20px
+    &:nth-child(2)
+      margin: 0 1rem
+
+@media (max-width: 967px)
+  .subscribe
+    padding: 30px
+    &__body
+      flex: 2
+
+@media (max-width: 870px)
+  .section .container
+    flex-direction: column
+
+  .card
+    padding: 40px
+    flex-direction: row
+    margin-bottom: 2rem
+    align-items: center
+    &:nth-child(2)
+      margin: 0 0 2rem 0
+    &__title
+      flex-basis: 100%
+      order: -1
+      margin-top: 0
+    &__body
+      flex: 1
+    &__img__container
+      margin-right: 1rem
+    &__footer
+      flex-basis: 100%
+      .btn
+        flex: none
+
+  .faq
+    &__cards__container
+      flex-direction: column
+      align-items: center
+    &__card
+      flex: 1 0 auto
+  .contact
+    &__section
+      flex-direction: column
+    &__item
+      margin-bottom: 20px
+
+@media (max-width: 768px)
+  .hamburger
+    display: inline-block
+  .nav
+    position: fixed
+    height: 100vh
+    top: 0
+    left: 0
+    width: 100%
+    transform: translateX(-100%)
+    &__menu
+      display: block
+      padding-top: 10vh
+      background: $nav-bg
+      &__fill
+        flex: 1
+      .divider
+        display: block
+        margin: 15px 10px
+        background: $main-green
+    &__item
+      margin: 0
+      &--hidden-md
+        display: block
+    &__link
+      padding-left: 15px
+    &--toggler
+      display: none
+
+  .section
+    padding: 100px 0
+
+  .subscribe
+    &__wrapper
+      top: -207px
+    &__header
+      display: block
+    &__title
+      flex-basis: 100%
+      margin-bottom: 20px
+      font-size: 30px
+    &__body
+      display: block
+    &__form
+      flex-direction: column
+      padding: 20px 0 0 0
+    &__input
+      margin: 0 0 20px 0
+    &__form .btn
+      margin-top: 20px
+
+  .contact__section
+    padding: 180px 0 30px 0
+
+  .footer__description
+    flex-basis: 100vw
+
+@media (max-width: 575px)
+  .main
+    height: calc(100vh - 75px)
+    &__title
+      font-size: 35px
+      text-shadow: 1px 1px 1px #313a5885
+    &__body
+      margin-bottom: 40px
+
+  .card
+    padding: 20px
+    flex-direction: column
+    text-align: center
+    &__title
+      order: 0
+      margin: 20px
+    &__body
+      margin-bottom: 15px
+    &__img__container
+      margin: 0
+    &__footer
+      display: block
+
+  .footer__nav__section
+    padding-top: 20px
+
+@media (max-width: 539px)
+  .main
+    .btn
+      &--group
+        justify-content: space-around
+      &--primary
+        margin-right: 0px
+
+@media (max-width: 539px)
+  .subscribe__wrapper
+    top: -223
+
+@media (max-width: 404px)
+  .subscribe__wrapper
+    top: -239
+
+.slide-in
+  animation: slide-in 0.4s ease-in-out both
+
+.delay-100
+  animation-delay: 100ms
+
+.delay-200
+  animation-delay: 200ms
+
+.delay-300
+  animation-delay: 300ms
+
+.delay-400
+  animation-delay: 400ms
+
+.delay-500
+  animation-delay: 500ms
+
+.delay-600
+  animation-delay: 600ms
+
+@keyframes slide-in
+  0%
+    transform: translateZ(-1400px)
+    opacity: 0
+
+  100%
+    transform: translateZ(0)
+    opacity: 1
