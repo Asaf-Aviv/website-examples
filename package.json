@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Website Examples",
   "scripts": {
-    "build_all": "node auto_build.js"
+    "build": "node auto_build.js",
+    "clear": "node clear.js"
   },
   "repository": {
     "type": "git",
@@ -15,7 +16,5 @@
     "url": "https://github.com/Asaf-Aviv/website-examples/issues"
   },
   "homepage": "https://github.com/Asaf-Aviv/website-examples#readme",
-  "devDependencies": {
-    "filehound": "^1.16.4"
-  }
+  "devDependencies": {}
 }

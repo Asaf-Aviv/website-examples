@@ -1,2 +1,11 @@
 import './js/main';
 import './sass/main.sass';
+import './assets/ai_face.svg';
+import './assets/asset_1.svg';
+import './assets/asset_2.svg';
+import './assets/asset_3.svg';
+import './assets/asset_4.svg';
+import './assets/instagram.svg';
+import './assets/interface.svg';
+import './assets/twitter.svg';
+import './assets/youtube.svg';

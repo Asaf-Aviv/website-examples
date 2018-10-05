@@ -29,19 +29,30 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Functions
-  function slideStories(pageNumber) {
-    stories.forEach(async story => {
-      if (story.getAttribute('data-page') != pageNumber) {
-        if (story.classList.contains('story--slide-in')) {
-          story.classList.remove('story--slide-in');
-          story.classList.add('story--slide-out');
+  function slideInStory(pageNumber) {
+    document.querySelectorAll(`.story[data-page="${pageNumber}"]`)
+      .forEach(story => story.classList.add('story--slide-in'));
+  }
+
+  async function slideOutStory(pageNumber) {
+    return new Promise(resolve => {
+      document.querySelectorAll(`.story.story--slide-in:not([data-page="${pageNumber}"])`)
+        .forEach(async story => {
+          classList(story)
+            .remove('story--slide-in')
+            .add('story--slide-out');
+
           await delay(250);
-          story.classList.remove('story--slide-out')
-        }
-        return;
-      }
-      setTimeout(() => story.classList.add('story--slide-in'), 250);
-    });
+
+          classList(story).remove('story--slide-out');
+          resolve();
+        });
+      });
+  }
+
+  async function slideStories(pageNumber) {
+    await slideOutStory(pageNumber);
+    slideInStory(pageNumber);
   }
 
   function delay(ms) {
@@ -58,6 +69,15 @@ document.addEventListener('DOMContentLoaded', () => {
       lastCall = now;
       return fn(...args);
     }
+  }
+
+  function classList(ele) {
+    const classes = ele.classList;
+    return {
+        toggle: function(c) { classes.toggle(c); return this; },
+        add:    function(c) { classes.add   (c); return this; },
+        remove: function(c) { classes.remove(c); return this; }
+    };
   }
 });
 

@@ -1,13 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './app.js',
-  output: {
-    path: __dirname + '/dist',
-    filename: 'bundle.js',
-  },
   module: {
     rules: [
       {
@@ -28,7 +23,14 @@ module.exports = {
       {
         test: /\.(gif|png|jpe?g|svg)/i,
         use: [
-          'file-loader',
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'assets/',
+              publicPath: '../assets/',
+            },
+          },
           {
             loader: 'image-webpack-loader',
             options: {
@@ -53,19 +55,21 @@ module.exports = {
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: [
-          'file-loader'
-        ]
-      }
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/',
+              publicPath: '../fonts/',
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
-    new MiniCssExtractPlugin({
-      filename: 'css/styles.css',
-    }),
     new HtmlWebpackPlugin({
       template: './index.html',
-      filename: './index.html',
     }),
-    new CopyWebpackPlugin([{ from: 'assets', to: 'assets' }])
   ],
 };

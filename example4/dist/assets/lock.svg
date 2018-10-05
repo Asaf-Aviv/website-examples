@@ -1,5 +1,1 @@
-<?xml version="1.0"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 57 57" style="enable-background:new 0 0 57 57;" xml:space="preserve" width="512px" height="512px" class=""><g><g>
-	<rect x="6.5" y="51" width="44" height="6" data-original="#000000" class="active-path" data-old_color="#F9AA09" fill="#F9A700"/>
-	<path d="M40.5,23V11.601C40.5,5.204,34.893,0,28,0S15.5,5.204,15.5,11.601V23h-9v26h44V23H40.5z M17.5,11.601   C17.5,6.307,22.21,2,28,2s10.5,4.307,10.5,9.601V23h-21V11.601z M32.5,41c0,2.206-1.794,4-4,4s-4-1.794-4-4v-6c0-2.206,1.794-4,4-4   s4,1.794,4,4V41z" data-original="#000000" class="active-path" data-old_color="#F9AA09" fill="#F9A700"/>
-</g></g> </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57 57" width="512" height="512"><path data-original="#000000" class="active-path" data-old_color="#F9AA09" fill="#F9A700" d="M6.5 51h44v6h-44zm34-28V11.601C40.5 5.204 34.893 0 28 0S15.5 5.204 15.5 11.601V23h-9v26h44V23h-10zm-23-11.399C17.5 6.307 22.21 2 28 2s10.5 4.307 10.5 9.601V23h-21V11.601zM32.5 41c0 2.206-1.794 4-4 4s-4-1.794-4-4v-6c0-2.206 1.794-4 4-4s4 1.794 4 4v6z"/></svg>
