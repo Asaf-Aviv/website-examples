@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Khula:300,400,600,700">
+  <title>Example 3</title>
+<link href="css/styles.css" rel="stylesheet"></head>
+
+<body>
+  <header class="nav__header">
+    <div class="container">
+      <nav class="nav">
+        <div class="nav--toggler">
+          <img src="assets/menu.svg" alt="menu">
+        </div>
+        <div class="logo">
+          <a href="/" class="nav__link nav__brand">LOGO</a>
+        </div>
+        <div class="menu__container">
+          <ul class="nav__menu">
+            <li class="nav__item"><a href="#" class="nav__link">Features</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Solutions</a></li>
+            <li class="nav__item"><a href="#" class="nav__link nav__link--active">Pricing</a></li>
+          </ul>
+          <div class="nav__menu__fill"></div>
+        </div>
+        <div class="nav__signup__container">
+          <a href="/signup" class="nav__link nav__signup">Sign up</a>
+          <form class="signup__form" action="#">
+            <h2 class="signup__form__title">Sign Up</h2>
+            <label class="signup__form__label" for="Email">Email</label>
+            <input class="signup__form__input" type="email" required>
+            <label class="signup__form__label" for="Password">Password</label>
+            <input class="signup__form__input" type="password" required>
+            <div class="signup__form__btns">
+              <button class="signup__btn signup__btn--primary" type="submit">Sign Up</button>
+              <button class="signup__btn signup__btn--secondary" type="button">Sign In</button>
+            </div>
+          </form>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <header class="page__header">
+    <div class="container">
+      <h1 class="page__header__title">Lorem ipsum</h1>
+      <img class="page__img" src="assets/Artboard 30.svg" alt="hardware">
+    </div>
+  </header>
+
+  <section class="pricing__section">
+    <div class="container">
+      <div class="pricing__cards__container">
+
+        <div class="categories">
+          <h2 class="categories__row categories__title">Plan</h2>
+          <span class="categories__row">Disk Space</span>
+          <span class="categories__row">Monthly Cost</span>
+          <span class="categories__row">Connections</span>
+        </div>
+
+        <div class="pricing__card pricing__card--free">
+          <h2 class="card__row card__title">Free</h2>
+          <span class="card__row">30GB</span>
+          <span class="card__row card__price">Free</span>
+          <span class="card__row">1</span>
+          <button class="card__btn">Subscribe</button>
+        </div>
+
+        <div class="pricing__card pricing__card--pro">
+          <h2 class="card__row card__title">Pro</h2>
+          <span class="card__row">240GB</span>
+          <span class="card__row card__price">19.99$</span>
+          <span class="card__row">10</span>
+          <button class="card__btn">Subscribe</button>
+        </div>
+
+        <div class="pricing__card pricing__card--basic">
+          <h2 class="card__row card__title">Basic</h2>
+          <span class="card__row">120GB</span>
+          <span class="card__row card__price">9.99$</span>
+          <span class="card__row">5</span>
+          <button class="card__btn">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="support__section">
+    <div class="container">
+      <div class="support__container">
+        <div class="support__box">
+          <img class="support__box__img" src="./assets/shield.svg" alt="shield">
+          <h1 class="support__box__title">Lorem ipsum</h1>
+          <p class="support__box__text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Provident temporibus nihil, quas distinctio illum amet exercitationem deserunt alias ipsum! Ipsum.
+          </p>
+        </div>
+        <div class="support__box">
+          <img class="support__box__img" src="assets/tools.svg" alt="tools">
+          <h1 class="support__box__title">Dolor sit</h1>
+            <p class="support__box__text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Aliquam harum, inventore blanditiis iure consectetur rerum distinctio
+              placeat repellat fugiat accusamus voluptatem reiciendis voluptates itaque
+              beatae optio odio quo ab! Quaerat.
+            </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <nav class="footer__nav">
+        <a href="#" class="footer__link footer__brand">LOGO</a>
+        <a href="#" class="footer__link">Features</a>
+        <a href="#" class="footer__link">Solutions</a>
+        <a href="#" class="footer__link">Pricing</a>
+      </nav>
+    </div>
+  </footer>
+<script type="text/javascript" src="bundle.js"></script></body>
+
+</html>

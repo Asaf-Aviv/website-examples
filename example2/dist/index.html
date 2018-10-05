@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700">
+  <title>Example 2</title>
+<link href="css/styles.css" rel="stylesheet"></head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="hamburger">
+        <img class="app__icon" height="30" src="assets/interface.svg" alt="interface">
+      </div>
+      <nav class="nav">
+        <ul class="nav__menu">
+          <li class="nav__item"><a href="#home" data-target=".header" class="nav__brand nav__link">Brand</a></li>
+          <li class="nav__item"><a href="#home" data-target=".header" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="#guide" data-target=".main__guide" class="nav__link">How It Works</a></li>
+          <li class="nav__item"><a href="#contact" data-target=".connect" class="nav__link">Contact</a></li>
+        </ul>
+        <div class="nav__menu__fill"></div>
+      </nav>
+    </div>
+  </header>
+
+  <header class="page__header">
+    <img src="assets/ai_face.svg" alt="face" class="page__header__img">
+    <button class="btn btn--primary btn--large page__header__btn">Explore</button>
+  </header>
+
+  <main class="main__guide">
+    <div class="guide__container">
+
+      <h1 class="guide__header">How It Works</h1>
+
+      <div class="guide__item">
+        <div class="guide__img__container">
+          <img class="guide__img" src="assets/asset_2.svg" alt="robot">
+        </div>
+        <div class="guide__info">
+          <h2 class="guide__title">Lorem ipsum</h2>
+          <p class="guide__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, natus.</p>
+        </div>
+      </div>
+
+      <div class="guide__item">
+        <div class="guide__img__container">
+          <img class="guide__img" src="assets/asset_4.svg" alt="robot">
+        </div>
+        <div class="guide__info">
+          <h2 class="guide__title">Lorem ipsum</h2>
+          <p class="guide__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, natus.</p>
+        </div>
+      </div>
+
+      <div class="guide__item">
+        <div class="guide__img__container">
+          <img class="guide__img" src="assets/asset_1.svg" alt="robot">
+        </div>
+        <div class="guide__info">
+          <h2 class="guide__title">Lorem ipsum</h2>
+          <p class="guide__text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde veniam voluptatibus autem? A,
+            optio deleniti iure maxime officia neque repellendus!
+          </p>
+        </div>
+      </div>
+
+      <div class="guide__item">
+        <div class="guide__img__container">
+          <img class="guide__img" src="assets/asset_3.svg" alt="robot">
+        </div>
+        <div class="guide__info">
+          <h2 class="guide__title">Lorem ipsum</h2>
+          <p class="guide__text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Quidem quis, libero beatae amet sunt tempora.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section class="contact__section">
+    <div class="container">
+      <h2 class="contact__title">Contact Us</h2>
+
+      <form action="#" class="form">
+        <div class="contact__inputs">
+          <label class="label" for="Name">Name</label>
+          <input class="input" type="text" placeholder="Name">
+          <label class="label" for="Email">Email</label>
+          <input class="input" type="email" placeholder="Email">
+          <label class="label" for="Message">Message</label>
+          <textarea class="input textarea" rows="6" placeholder="Message"></textarea>
+          <button class="btn btn--submit btn--large btn--center">Send</button>
+        </div>
+      </form>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+
+      <ul class="social__menu">
+        <li class="social__item">
+          <a href="#" class="social__link">
+            <img class="social__icon" src="assets/instagram.svg" alt="instagram">
+          </a>
+        </li>
+
+        <li class="social__item">
+          <a href="#" class="social__link">
+            <img class="social__icon" src="assets/youtube.svg" alt="youtube">
+          </a>
+        </li>
+
+        <li class="social__item">
+          <a href="#" class="social__link">
+            <img class="social__icon" src="assets/twitter.svg" alt="twitter">
+          </a>
+        </li>
+      </ul>
+
+      <div class="connect">
+        <form class="form" action="#">
+          <input class="connect__input" type="text" placeholder="Email">
+          <button class="connect__btn" type="submit">Join</button>
+        </form>
+      </div>
+
+      <div class="copyrights">
+        <p class="copyrights__text">&copy; Robots - 2018</p>
+      </div>
+
+    </div>
+  </footer>
+<script type="text/javascript" src="bundle.js"></script></body>
+
+</html>

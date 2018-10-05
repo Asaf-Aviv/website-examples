@@ -1,27 +1,21 @@
 {
   "name": "website-examples",
   "version": "1.0.0",
-  "description": "",
-  "main": "gulpfile.js",
-  "dependencies": {},
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-clean-css": "^3.10.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.1"
-  },
+  "description": "Website Examples",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build_all": "node auto_build.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Asaf-Aviv/website-examples.git"
   },
-  "author": "",
+  "author": "Asaf Aviv",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Asaf-Aviv/website-examples/issues"
   },
-  "homepage": "https://github.com/Asaf-Aviv/website-examples#readme"
+  "homepage": "https://github.com/Asaf-Aviv/website-examples#readme",
+  "devDependencies": {
+    "filehound": "^1.16.4"
+  }
 }
