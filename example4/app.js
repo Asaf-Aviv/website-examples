@@ -1,14 +1,2 @@
 import './js/main';
 import './sass/main.sass';
-import './assets/fb.svg'
-import './assets/lock.svg'
-import './assets/menu.svg'
-import './assets/shield.svg'
-import './assets/tw.svg'
-import './assets/p1.jpg'
-import './assets/p2.jpg'
-import './assets/p3.jpg'
-import './assets/p4.jpg'
-import './assets/p5.jpg'
-import './assets/p6.jpg'
-import './assets/security.jpg'

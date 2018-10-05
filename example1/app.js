@@ -1,9 +1,2 @@
 import './js/main';
 import './sass/main.sass';
-import './assets/clipboard.svg';
-import './assets/envelope.svg';
-import './assets/graph.svg';
-import './assets/hand.svg';
-import './assets/marker.svg';
-import './assets/question.svg';
-import './assets/telephone.svg';
