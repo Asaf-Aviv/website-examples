@@ -1,12 +1,11 @@
-\:root
-  --main-text: #f8f8f9
-  --grey: #bbb
-  --green: #89f5a1
-  --orange: #f7c920
-  --purple-gradient: linear-gradient(135deg, #ce9ffc 0%, #7367f0 100%)
-  --green-gradient: linear-gradient(135deg, #42e695 0%, #3bb2b8 100%)
-  --red-gradient: linear-gradient(135deg, #f36265 0%, #961276 100%)
-  --orange-gradient: linear-gradient(145deg, rgba(212, 172, 77, 1) 0%, rgba(247, 201, 32, 1) 55%, rgba(150, 137, 12, 1) 100%)
+$main-text: #f8f8f9
+$grey: #bbb
+$green: #89f5a1
+$orange: #f7c920
+$purple-gradient: linear-gradient(135deg, #ce9ffc 0%, #7367f0 100%)
+$green-gradient: linear-gradient(135deg, #42e695 0%, #3bb2b8 100%)
+$red-gradient: linear-gradient(135deg, #f36265 0%, #961276 100%)
+$orange-gradient: linear-gradient(145deg, rgba(212, 172, 77, 1) 0%, rgba(247, 201, 32, 1) 55%, rgba(150, 137, 12, 1) 100%)
 $body-gradient: linear-gradient(145deg, rgb(68, 45, 140) 0%, rgba(27, 60, 134, 0.9) 35%, rgb(89, 30, 156) 70%, rgb(105, 50, 169) 100%)
 
 *
@@ -18,8 +17,8 @@ $body-gradient: linear-gradient(145deg, rgb(68, 45, 140) 0%, rgba(27, 60, 134, 0
 
 body
   font-family: "Khula", sans-serif
-  color: var(--main-text)
-  background: var(--body-gradient)
+  color: $main-text
+  background: $body-gradient
   min-height: 100vh
   background: $body-gradient
 
@@ -31,86 +30,76 @@ button, input, textarea
   padding: 0 15px
   margin: 0 auto
 
-.nav__header
-  padding: 20px 0
-
 .nav
   display: flex
   justify-content: space-between
   align-items: center
+  &__header
+    padding: 20px 0
+  &--toggler
+    cursor: pointer
+    display: none
+  &__menu
+    display: flex
+    list-style: none
+    justify-content: space-evenly
+    flex: 0.5
+    &__fill
+      cursor: pointer
+      background: rgba(0, 0, 0, 0.2)
+  &__link
+    position: relative
+    display: block
+    font-size: 18px
+    color: $main-text
+    text-decoration: none
+    font-weight: 600
+    padding: 5px 10px
+    letter-spacing: 1px
+    &--active::after
+      content: ""
+      position: absolute
+      bottom: 2px
+      border-radius: 5px
+      height: 5px
+      width: 5px
+      left: 50%
+      transform: translateX(-50%)
+      background: $green
+  &__brand
+    color: $green
+    font-size: 36px
+  &__signup
+    padding: 5px 30px 0px 10px
+    text-transform: uppercase
+    &--active
+      &::after
+        transform: rotate(90deg) translateY(3px)
+      ~ .signup__form
+        transform: translateY(0)
+        opacity: 1
+    &::after
+      position: absolute
+      display: inline-flex
+      content: url(../assets/arrow.svg)
+      align-items: center
+      justify-content: center
+      transition: transform 150ms
+      top: 3px
+      right: 10px
+    &__container
+      position: relative
+      border-radius: 15px
+      background: $purple-gradient
+      box-shadow: 0 4px 10px rgba(32, 29, 49, 0.5)
 
-.nav--toggler
-  cursor: pointer
-  display: none
-
-.nav__menu
-  display: flex
-  list-style: none
-  justify-content: space-evenly
-  flex: 0.5
-
-.nav__menu__fill
-  cursor: pointer
-  background: rgba(0, 0, 0, 0.2)
-
-.menu__container
-  will-change: transform
-  transition: transform 250ms
-  flex: 0.5
-
-.menu__container--open
-  transform: translateX(0) !important
-
-.nav__link
-  position: relative
-  display: block
-  font-size: 18px
-  color: var(--main-text)
-  text-decoration: none
-  font-weight: 600
-  padding: 5px 10px
-  letter-spacing: 1px
-
-.nav__link--active::after
-  content: ""
-  position: absolute
-  bottom: 2px
-  border-radius: 5px
-  height: 5px
-  width: 5px
-  left: 50%
-  transform: translateX(-50%)
-  background: var(--green)
-
-.nav__brand
-  color: var(--green)
-  font-size: 36px
-
-.nav__signup__container
-  position: relative
-  border-radius: 15px
-  background: var(--purple-gradient)
-  box-shadow: 0 4px 10px rgba(32, 29, 49, 0.5)
-
-.nav__signup
-  padding: 5px 30px 0px 10px
-  text-transform: uppercase
-  &::after
-    position: absolute
-    display: inline-flex
-    content: url(../assets/arrow.svg)
-    align-items: center
-    justify-content: center
-    transition: transform 150ms
-    top: 3px
-    right: 10px
-
-.nav__signup--active
-  &::after
-    transform: rotate(90deg) translateY(3px)
-  ~ .signup__form
-    transform: translateY(0)
-    opacity: 1
+.menu
+  &__container
+    will-change: transform
+    transition: transform 250ms
+    flex: 0.5
+    &--open
+      transform: translateX(0) !important
 
 .signup__form
   position: absolute
@@ -133,37 +122,34 @@ button, input, textarea
     border-left: 15px solid transparent
     border-right: 15px solid transparent
     border-bottom: 15px solid #382d92
+  &__title
+    margin-bottom: 15px
+    letter-spacing: 1.5px
+    font-weight: 600
+    color: $orange
+  &__label
+    color: $green
+    font-weight: 600
+    letter-spacing: 0.5px
+  &__input
+    border-radius: 37px
+    width: 250px
+    border: none
+    color: $main-text
+    padding: 8px 15px
+    background: rgba(255, 255, 255, 0.2)
+    margin-bottom: 20px
+    box-shadow: 0 5px 10px rgba(32, 29, 49, 0.4)
+    &:focus
+      outline: none
+    &:last-of-type
+      margin-bottom: 40px
+  &__btns
+    display: flex
+    justify-content: space-between
 
-.signup__form__title
-  margin-bottom: 15px
-  letter-spacing: 1.5px
-  font-weight: 600
-  color: var(--orange)
-
-.signup__form__label
-  color: var(--green)
-  font-weight: 600
-  letter-spacing: 0.5px
-
-.signup__form__input
-  border-radius: 37px
-  width: 250px
-  border: none
-  color: var(--main-text)
-  padding: 8px 15px
-  background: rgba(255, 255, 255, 0.2)
-  margin-bottom: 20px
-  box-shadow: 0 5px 10px rgba(32, 29, 49, 0.4)
-  &:focus
-    outline: none
-  &:last-of-type
-    margin-bottom: 40px
-
-.signup__form__btns
-  display: flex
-  justify-content: space-between
-
-.signup__btn
+.signup
+  &__btn
   outline: 0
   line-height: 44px
   cursor: pointer
@@ -174,59 +160,54 @@ button, input, textarea
   font-size: 16px
   text-shadow: 1px 1px 2px rgba(39, 39, 39, 0.5)
   box-shadow: 0 4px 10px rgba(32, 29, 49, 0.65)
+  &--primary
+    color: $main-text
+    border: none
+    margin-right: 20px
+    flex: 1
+    background: rgb(56, 185, 166)
+    background: $green-gradient
+  &--secondary
+    color: $main-text
+    border: none
+    flex: 1
+    background: rgb(247, 201, 32)
+    background: $red-gradient
 
-.signup__btn--primary
-  color: var(--main-text)
-  border: none
-  margin-right: 20px
-  flex: 1
-  background: rgb(56, 185, 166)
-  background: var(--green-gradient)
-
-.signup__btn--secondary
-  color: var(--main-text)
-  border: none
-  flex: 1
-  background: rgb(247, 201, 32)
-  background: var(--red-gradient)
-
-.page__header
-  padding-top: 50px
-  max-height: 100vh
-  .container
+.page
+  &__header
+    padding-top: 50px
+    max-height: 100vh
+    .container
+      height: 100%
+    &__title
+      font-size: 48px
+      text-align: center
+      font-weight: 600
+  &__img
     height: 100%
+    width: 100%
+    user-select: none
 
-.page__header__title
-  font-size: 48px
-  text-align: center
-  font-weight: 600
-
-.page__img
-  height: 100%
-  width: 100%
-  user-select: none
-
-.pricing__section
-  margin-bottom: 150px
-
-.pricing__cards__container
-  display: flex
-  flex-wrap: wrap
-  justify-content: space-around
+.pricing
+  &__section
+    margin-bottom: 150px
+  &__cards__container
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
 
 .categories
   padding-top: 60px
   max-width: 160px
-
-.categories__row
-  letter-spacing: 1px
-  display: block
-  font-weight: 600
-  margin-bottom: 46px
-
-.categories__title
-  font-size: 32px
-  margin-bottom: 35px
+  &__row
+    letter-spacing: 1px
+    display: block
+    font-weight: 600
+    margin-bottom: 46px
+  &__title
+    font-size: 32px
+    margin-bottom: 35px
 
 .pricing__card
   padding: 60px 0
@@ -236,86 +217,76 @@ button, input, textarea
   flex-basis: 251px
   max-width: 300px
   box-shadow: 0 8px 30px rgb(56, 21, 97)
+  &--free
+    background: $purple-gradient
+  &--basic
+    background: $green-gradient
+  &--pro
+    background: $red-gradient
 
-.pricing__card--free
-  background: var(--purple-gradient)
+.card
+  &__row
+    letter-spacing: 1px
+    display: block
+    font-size: 20px
+    font-weight: 600
+    margin-bottom: 30px
+    text-shadow: 2px 2px rgba(29, 29, 29, 0.3)
+  &__title, &__price
+    font-size: 32px
+  &__btn
+    user-select: none
+    outline: 0
+    cursor: pointer
+    letter-spacing: 1px
+    background: inherit
+    border: 0
+    font-size: 16px
+    padding: 10px 24px
+    color: $main-text
+    border-radius: 20px
+    box-shadow: 0 5px 20px rgba(29, 29, 29, 0.3)
 
-.pricing__card--basic
-  background: var(--green-gradient)
-
-.pricing__card--pro
-  background: var(--red-gradient)
-
-.card__row
-  letter-spacing: 1px
-  display: block
-  font-size: 20px
-  font-weight: 600
-  margin-bottom: 30px
-  text-shadow: 2px 2px rgba(29, 29, 29, 0.3)
-
-.card__title, .card__price
-  font-size: 32px
-
-.card__btn
-  user-select: none
-  outline: 0
-  cursor: pointer
-  letter-spacing: 1px
-  background: inherit
-  border: 0
-  font-size: 16px
-  padding: 10px 24px
-  color: var(--main-text)
-  border-radius: 20px
-  box-shadow: 0 5px 20px rgba(29, 29, 29, 0.3)
-
-.support__section
-  margin-bottom: 150px
-
-.support__container
-  padding: 50px 0
-  display: flex
-  flex-wrap: wrap
-  justify-content: space-evenly
-  background: rgba(42, 30, 109, 0.6)
-  border-radius: 20px
-  box-shadow: 0 8px 30px rgb(47, 16, 82)
-
-.support__box
-  padding: 20px
-  text-align: center
-  max-width: 500px
-  letter-spacing: 1.5px
-  margin-bottom: 30px
-
-.support__box__img, .support__box__title
-  margin-bottom: 20px
-
-.support__box__text
-  line-height: 2.2
-  color: var(--grey)
+.support
+  &__section
+    margin-bottom: 150px
+  &__container
+    padding: 50px 0
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-evenly
+    background: rgba(42, 30, 109, 0.6)
+    border-radius: 20px
+    box-shadow: 0 8px 30px rgb(47, 16, 82)
+  &__box
+    padding: 20px
+    text-align: center
+    max-width: 500px
+    letter-spacing: 1.5px
+    margin-bottom: 30px
+    &__img, &__title
+      margin-bottom: 20px
+    &__text
+      line-height: 2.2
+      color: $grey
 
 .footer
   background: #382d92
   padding: 10px 0
-
-.footer__nav
-  display: flex
-  align-items: center
-
-.footer__link
-  display: inline-block
-  text-decoration: none
-  margin-right: 10px
-  padding: 15px 0
-  color: var(--main-text)
-  &:hover
-    text-decoration: underline
-
-.footer__brand
-  font-size: 24px
-  color: var(--green)
+  &__nav
+    display: flex
+    align-items: center
+  &__link
+    display: inline-block
+    text-decoration: none
+    margin-right: 10px
+    padding: 15px 0
+    color: $main-text
+    &:hover
+      text-decoration: underline
+  &__brand
+    font-size: 24px
+    color: $green
 
 @media (max-width: 1100px)
   .categories

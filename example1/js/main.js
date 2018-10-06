@@ -23,17 +23,17 @@ document.addEventListener('DOMContentLoaded', () => {
   function observer(ms) {
     return new IntersectionObserver(function(entries) {
       const threshold = this.thresholds[0];
-
       if (entries[0].intersectionRatio >= threshold) {
         entries[0].target.classList.add('slide-in', `delay-${ms}`);
-        this.unobserve(entry.target);
+        this.unobserve(entries[0].target);
       }
     }, { threshold: 0.4 });
   }
 
   function toggleNav() {
-    body.style.overflow = nav.classList.contains('nav--open') ?
-    'visible' : 'hidden';
+    body.style.overflow = nav.classList.contains('nav--open')
+      ? 'visible'
+      : 'hidden';
 
     nav.classList.toggle('nav--open');
   }
@@ -43,9 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (classes.contains('btn--bordered-base') || classes.contains('nav--toggler')) {
       navSignup.classList.toggle('nav__signup--open');
-      // const navDisplay = navSignup.style.display;
-
-      // navSignup.style.display = !navDisplay || navDisplay === 'none' ? 'block' :'none';
     }
   }
 });

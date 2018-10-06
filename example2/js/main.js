@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navTogglers         = document.querySelectorAll('.hamburger, .nav__menu__fill');
   const navLinks            = nav.querySelectorAll('.nav__link');
   const pageSections        = document.querySelectorAll('.page__header, .page__header__img, .main__guide, .contact__section');
-  const pageSectionsOffsets = [...pageSections].map(sec => sec.offsetTop - 60);
+  const pageSectionsOffsets = [...pageSections].map(sec => sec.offsetTop);
 
   // OnLoad
   activeMenuSwitcher();
@@ -29,14 +29,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const isNavOpen = () => nav.classList.contains('nav--open');
 
   function toggleNav() {
-    body.style.overflow = nav.classList.contains('nav--open') ?
-      'visible' : 'hidden';
+    body.style.overflow = nav.classList.contains('nav--open')
+      ? 'visible'
+      : 'hidden';
 
     nav.classList.toggle('nav--open');
   }
 
   function smoothScroll(top, behavior = 'smooth') {
-    window.scrollTo({ top, behavior });
+    window.scrollTo({ top: top + 2, behavior });
   }
 
   function activeMenuSwitcher() {
